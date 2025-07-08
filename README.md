@@ -1,3 +1,5 @@
+<img width="394" alt="image" src="https://github.com/user-attachments/assets/b1dae5cb-906e-4743-87a9-d078b7ea98e6" />
+
 # ENAA Skills
 
 ENAA Skills is a microservice designed to manage and track employees' skills and sub-skills (C1 to C8) at ENAA. It helps educational managers monitor learners' progress, validate skills, and identify areas for further training.
