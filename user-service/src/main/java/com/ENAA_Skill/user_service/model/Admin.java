@@ -1,4 +1,8 @@
 package com.ENAA_Skill.user_service.model;
 
-public class Admin {
+import jakarta.persistence.Entity;
+
+@Entity
+public class Admin extends User {
+
 }
