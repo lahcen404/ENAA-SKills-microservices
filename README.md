@@ -1,4 +1,3 @@
-<img width="394" alt="image" src="https://github.com/user-attachments/assets/b1dae5cb-906e-4743-87a9-d078b7ea98e6" />
 
 
 
@@ -25,3 +24,11 @@ ENAA Skills is a microservice designed to manage and track employees' skills and
 - Export progress tracking reports
 
 [POSTMAN COLLECTION LINK ](https://yguhijopl.postman.co/workspace/My-Workspace~49aab289-6de5-487b-8f91-58ce1aacf8db/collection/41299916-9b5fb412-5df7-4a92-96f7-722a70f04658?action=share&creator=41299916)
+
+
+
+<img width="394" alt="image" src="https://github.com/user-attachments/assets/b1dae5cb-906e-4743-87a9-d078b7ea98e6" />
+
+![image](https://github.com/user-attachments/assets/c8162af6-2137-4ce9-96bc-b02a9df7d54a)
+![image](https://github.com/user-attachments/assets/4e736f0d-68ae-498d-a6ef-a986c16961dd)
+
