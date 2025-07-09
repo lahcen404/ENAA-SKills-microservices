@@ -4,14 +4,12 @@ import com.ENAA_Skill.user_service.dto.MessageResponse;
 import com.ENAA_Skill.user_service.dto.RegistrationRequest;
 import com.ENAA_Skill.user_service.model.Learner;
 import com.ENAA_Skill.user_service.model.Trainer;
+import com.ENAA_Skill.user_service.model.User;
 import com.ENAA_Skill.user_service.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -63,5 +61,10 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
         }
+    }
+
+    @GetMapping("/{id}")
+    public Optional<User> checkUserExists(@PathVariable Long id){
+       return userService.getUserById(id);
     }
 }

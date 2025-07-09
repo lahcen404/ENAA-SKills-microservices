@@ -3,9 +3,12 @@ package com.ENAA_Skill.user_service.services;
 import com.ENAA_Skill.user_service.dto.RegistrationRequest;
 import com.ENAA_Skill.user_service.model.Learner;
 import com.ENAA_Skill.user_service.model.Trainer;
+import com.ENAA_Skill.user_service.model.User;
 import com.ENAA_Skill.user_service.repositories.UserRepositorie;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -40,6 +43,9 @@ public class UserService {
         return userRepositorie.save(trainer);
     }
 
+    public Optional<User> getUserById(Long id){
+        return userRepositorie.findById(id);
+    }
 
 
     public String getValidationErrorMessage() {
