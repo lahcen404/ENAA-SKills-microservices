@@ -1,4 +1,4 @@
-package Model;
+package org.budgetmanager.validationservice.Model;
 
 public enum ValidationStatus {
     VALIDE,
