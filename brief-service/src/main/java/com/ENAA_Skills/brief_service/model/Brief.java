@@ -15,6 +15,7 @@ public class Brief {
     @ElementCollection
     List<Long> skillIds = new ArrayList<>();
 
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -38,4 +39,6 @@ public class Brief {
     public void setSkillIds(List<Long> skillIds) {
         this.skillIds = skillIds;
     }
+
+    
 }
