@@ -3,14 +3,13 @@ package com.ENAA_Skill.user_service.controllers;
 import com.ENAA_Skill.user_service.dto.MessageResponse;
 import com.ENAA_Skill.user_service.dto.RegistrationRequest;
 import com.ENAA_Skill.user_service.model.Learner;
+import com.ENAA_Skill.user_service.model.Trainer;
+import com.ENAA_Skill.user_service.model.User;
 import com.ENAA_Skill.user_service.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -42,5 +41,30 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
         }
+    }
+    @PostMapping("/Trainer")
+    public ResponseEntity<?> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
+        try {
+            Optional<Trainer> registeredTrainerOptional = Optional.ofNullable(userService.registerTrainer(registrationRequest));
+
+            if (registeredTrainerOptional.isPresent()) {
+                Trainer registeredTrainer = registeredTrainerOptional.get();
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
+            } else {
+                // If Optional is empty, it means validation failed in the service
+                String errorMessage = userService.getValidationErrorMessage(); // Get the specific error message
+                return ResponseEntity.badRequest().body(new MessageResponse(errorMessage != null ? errorMessage : "Registration failed due to invalid input."));
+            }
+        } catch (Exception e) {
+            // This catch block is for truly unexpected, system-level errors
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
+        }
+    }
+
+    @GetMapping("/{id}")
+    public Optional<User> checkUserExists(@PathVariable Long id){
+       return userService.getUserById(id);
     }
 }
