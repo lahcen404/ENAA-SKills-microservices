@@ -56,6 +56,5 @@ public class SkillValidationService {
         return briefServiceClient.getBriefById(briefId);
     }
 
-    // You can add methods here to use userServiceClient when user-service endpoint is available
 }
 
