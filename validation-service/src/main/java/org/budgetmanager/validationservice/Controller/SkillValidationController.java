@@ -5,6 +5,9 @@ import org.budgetmanager.validationservice.service.SkillValidationService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.budgetmanager.validationservice.dto.UserDto;
+import org.budgetmanager.validationservice.dto.SkillDto;
+import org.budgetmanager.validationservice.dto.BriefDto;
 
 @RestController
 @RequestMapping("/skillvalidations")
@@ -35,6 +38,21 @@ public class SkillValidationController {
     @GetMapping("/subskill/{id}")
     public List<SkillValidation> getBySubSkill(@PathVariable Long id) {
         return service.getBySubSkillId(id);
+    }
+
+    @GetMapping("/user/{userId}")
+    public UserDto getUser(@PathVariable Long userId) {
+        return service.getUser(userId);
+    }
+
+    @GetMapping("/skill/{skillId}")
+    public SkillDto getSkill(@PathVariable Long skillId) {
+        return service.getSkill(skillId);
+    }
+
+    @GetMapping("/brief/{briefId}")
+    public BriefDto getBrief(@PathVariable Long briefId) {
+        return service.getBrief(briefId);
     }
 }
 
