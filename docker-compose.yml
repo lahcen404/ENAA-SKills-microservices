@@ -8,7 +8,7 @@ services:
     image: 'mysql:8.0'
     container_name: skill-db
     ports:
-      - "3310:3306" # <-- PORT CHANGED HERE
+      - "3310:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=skill_db
@@ -21,7 +21,7 @@ services:
     image: 'mysql:8.0'
     container_name: user-db
     ports:
-      - "3311:3306" # <-- PORT CHANGED HERE
+      - "3311:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=user_db
@@ -34,7 +34,7 @@ services:
     image: 'mysql:8.0'
     container_name: validation-db
     ports:
-      - "3312:3306" # <-- PORT CHANGED HERE
+      - "3312:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=validation_db
@@ -47,7 +47,7 @@ services:
     image: 'mysql:8.0'
     container_name: brief-db
     ports:
-      - "3313:3306" # <-- PORT CHANGED HERE
+      - "3313:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=brief_db
@@ -64,7 +64,7 @@ services:
       context: ./skill-service
     container_name: skill-service
     ports:
-      - "8083:8083"
+      - "8093:8083" # <-- PORT CHANGED HERE
     depends_on:
       - skill-db
     environment:
