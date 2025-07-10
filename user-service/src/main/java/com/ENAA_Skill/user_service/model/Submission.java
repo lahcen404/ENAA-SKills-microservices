@@ -1,5 +1,6 @@
 package com.ENAA_Skill.user_service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -22,6 +23,9 @@ public class Submission {
     }
 
     @ManyToOne
+    @JoinColumn(name = "learner_id")
+    @JsonIgnoreProperties("submissions") // 🛡️ bloque la boucle infinie
+
     private Learner learnerId;
 
 

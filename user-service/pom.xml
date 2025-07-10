@@ -9,8 +9,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.2.5</version> <!-- ✅ Compatible avec Spring Cloud 2023.0.1 -->
+		<relativePath/>
 	</parent>
 
 	<groupId>com.ENAA_Skill</groupId>
@@ -23,7 +23,7 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<!-- Gestion des versions de Spring Cloud -->
+	<!-- ✅ Gestion des versions de Spring Cloud -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -37,7 +37,7 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Spring Boot Web & JPA -->
+		<!-- ✅ Spring Web + JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -47,7 +47,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- Bases de données -->
+		<!-- ✅ Bases de données -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -64,31 +64,41 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Validation -->
+		<!-- ✅ Validation -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 
-		<!-- OpenFeign + Load Balancer -->
+		<!-- ✅ OpenFeign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+
+		<!-- ✅ LoadBalancer (si pas Eureka) -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 		</dependency>
 
-		<!-- Lombok -->
+		<!-- ✅ Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
-			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
 
-		<!-- Tests -->
+		<!-- ✅ Dépendance du brief-service (si en multi-module) -->
+		<dependency>
+			<groupId>com.ENAA_Skills</groupId>
+			<artifactId>brief-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- ✅ Tests -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -98,7 +108,7 @@
 
 	<build>
 		<plugins>
-			<!-- Compiler Plugin avec version Java -->
+			<!-- ✅ Compiler Plugin avec Java 17 + Lombok -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -116,20 +126,11 @@
 				</configuration>
 			</plugin>
 
-			<!-- Spring Boot Plugin -->
+			<!-- ✅ Spring Boot Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

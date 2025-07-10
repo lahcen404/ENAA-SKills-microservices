@@ -1,5 +1,6 @@
 package com.ENAA_Skill.user_service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
@@ -18,6 +19,8 @@ public class Learner extends User {
     }
 
     @OneToMany
+    @JsonIgnore // facultatif si tu ne veux pas exposer les submissions
+
     private List<Submission> submissions;
 
     public List<Submission> getSubmissions() {
