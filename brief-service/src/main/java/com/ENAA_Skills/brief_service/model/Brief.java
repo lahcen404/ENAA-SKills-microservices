@@ -16,6 +16,16 @@ public class Brief {
     List<Long> skillIds = new ArrayList<>();
 
 
+    public Brief(Long id, String title, List<Long> skillIds) {
+        this.id = id;
+        this.title = title;
+        this.skillIds = skillIds;
+    }
+
+    public Brief() {
+
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
