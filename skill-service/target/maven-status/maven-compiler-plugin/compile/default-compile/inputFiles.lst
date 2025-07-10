@@ -1,21 +1,20 @@
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\dto\SubSkillDTO.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\controller\LearnerController.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\repository\LearnerRepository.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\repository\SkillRepository.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\model\Skill.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\service\LearnerService.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\mapper\LearnerMapper.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\EnaaSkillsApplication.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\service\SkillManagementService.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\controller\SkillController.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\model\ValidationStatus.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\mapper\SkillMapper.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\repository\SubSkillRepository.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\dto\SkillDTO.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\model\SubSkill.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\service\serviceImpl\LearnerServiceImpl.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\model\Learner.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\dto\UpdateStatusDTO.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\service\serviceImpl\SkillManagementServiceImpl.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\dto\LearnerDTO.java
-C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills\src\main\java\com\ENAA_Skills\enaa_skills\config\SwaggerConfig.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\dto\SkillDTO.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\controller\SkillController.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\mapper\SkillMapper.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\dto\LearnerDTO.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\service\SkillManagementService.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\mapper\LearnerMapper.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\EnaaSkillsApplication.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\model\Skill.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\model\SubSkill.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\model\Learner.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\repository\LearnerRepository.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\dto\SubSkillDTO.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\model\ValidationStatus.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\repository\SkillRepository.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\service\LearnerService.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\config\SwaggerConfig.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\controller\LearnerController.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\repository\SubSkillRepository.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\service\serviceImpl\LearnerServiceImpl.java
+C:\Users\oumay\ENAA-SKills-microservices\skill-service\src\main\java\com\ENAA_Skills\enaa_skills\service\serviceImpl\SkillManagementServiceImpl.java

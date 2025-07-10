@@ -2,7 +2,6 @@ com\ENAA_Skills\enaa_skills\mapper\SkillMapper.class
 com\ENAA_Skills\enaa_skills\model\Skill.class
 com\ENAA_Skills\enaa_skills\model\Learner.class
 com\ENAA_Skills\enaa_skills\dto\LearnerDTO.class
-com\ENAA_Skills\enaa_skills\dto\UpdateStatusDTO.class
 com\ENAA_Skills\enaa_skills\service\SkillManagementService.class
 com\ENAA_Skills\enaa_skills\service\serviceImpl\LearnerServiceImpl.class
 com\ENAA_Skills\enaa_skills\dto\SubSkillDTO.class
