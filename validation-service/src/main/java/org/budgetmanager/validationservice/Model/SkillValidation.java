@@ -15,11 +15,9 @@ public class SkillValidation {
     @Enumerated(EnumType.STRING)
     private ValidationStatus status;
 
-    // No-arg constructor
     public SkillValidation() {
     }
 
-    // All-arg constructor
     public SkillValidation(Long id, Long submissionId, Long subSkillId, ValidationStatus status) {
         this.id = id;
         this.submissionId = submissionId;
@@ -27,7 +25,7 @@ public class SkillValidation {
         this.status = status;
     }
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }
