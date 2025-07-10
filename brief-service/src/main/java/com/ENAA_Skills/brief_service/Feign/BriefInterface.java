@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "skill-service", url = "http://localhost:8083")
+@FeignClient(name = "skill-service", url = "${SKILL_SERVICE_URL}")
 public interface BriefInterface {
 
     @GetMapping("skills/{id}")
