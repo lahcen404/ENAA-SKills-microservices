@@ -32,12 +32,10 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.CREATED)
                         .body(new MessageResponse("Learner " + registeredLearner.getUsername() + " (ID: " + registeredLearner.getId() + ") registered successfully!"));
             } else {
-                // If Optional is empty, it means validation failed in the service
                 String errorMessage = userService.getValidationErrorMessage(); // Get the specific error message
                 return ResponseEntity.badRequest().body(new MessageResponse(errorMessage != null ? errorMessage : "Registration failed due to invalid input."));
             }
         } catch (Exception e) {
-            // This catch block is for truly unexpected, system-level errors
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
         }
@@ -52,12 +50,10 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.CREATED)
                         .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
             } else {
-                // If Optional is empty, it means validation failed in the service
                 String errorMessage = userService.getValidationErrorMessage(); // Get the specific error message
                 return ResponseEntity.badRequest().body(new MessageResponse(errorMessage != null ? errorMessage : "Registration failed due to invalid input."));
             }
         } catch (Exception e) {
-            // This catch block is for truly unexpected, system-level errors
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
         }
