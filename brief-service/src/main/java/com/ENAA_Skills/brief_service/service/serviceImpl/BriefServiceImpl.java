@@ -6,6 +6,8 @@ import com.ENAA_Skills.brief_service.repository.BriefRepository;
 import com.ENAA_Skills.brief_service.service.BriefService;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 public class BriefServiceImpl implements BriefService {
@@ -29,4 +31,11 @@ public class BriefServiceImpl implements BriefService {
 
         return briefRepository.save(brief);
     }
+
+    @Override
+    public Optional<Brief> getBriefById(Long id) {
+        return briefRepository.findById(id);
+    }
+
+
 }
