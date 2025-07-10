@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version> <!-- ✅ Compatible avec Spring Cloud 2023.0.1 -->
+		<version>3.2.5</version>
 		<relativePath/>
 	</parent>
 
@@ -23,7 +23,6 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<!-- ✅ Gestion des versions de Spring Cloud -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -37,7 +36,7 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- ✅ Spring Web + JPA -->
+		<!-- Spring Web + JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -47,7 +46,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- ✅ Bases de données -->
+		<!-- Bases de données -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -64,25 +63,25 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- ✅ Validation -->
+		<!-- Validation -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 
-		<!-- ✅ OpenFeign -->
+		<!-- OpenFeign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
-		<!-- ✅ LoadBalancer (si pas Eureka) -->
+		<!-- LoadBalancer (si pas Eureka) -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 		</dependency>
 
-		<!-- ✅ Lombok -->
+		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -90,15 +89,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- ✅ Dépendance du brief-service (si en multi-module) -->
-		<dependency>
-			<groupId>com.ENAA_Skills</groupId>
-			<artifactId>brief-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
+		<!--
+          REMOVED: The direct dependency on brief-service was removed.
+          In a microservice architecture, services should be independent and
+          communicate over the network (using Feign), not have direct code dependencies.
+          This was causing the Docker build to fail.
+        -->
 
-		<!-- ✅ Tests -->
+		<!-- Tests -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -108,7 +106,7 @@
 
 	<build>
 		<plugins>
-			<!-- ✅ Compiler Plugin avec Java 17 + Lombok -->
+			<!-- Compiler Plugin avec Java 17 + Lombok -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -126,7 +124,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- ✅ Spring Boot Plugin -->
+			<!-- Spring Boot Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

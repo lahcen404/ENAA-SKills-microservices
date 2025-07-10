@@ -6,7 +6,6 @@ import com.ENAA_Skill.user_service.model.Learner;
 import com.ENAA_Skill.user_service.model.Submission;
 import com.ENAA_Skill.user_service.repositories.SubmissionRepositorie;
 import com.ENAA_Skill.user_service.repositories.UserRepositorie;
-import com.ENAA_Skills.brief_service.model.Brief;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
