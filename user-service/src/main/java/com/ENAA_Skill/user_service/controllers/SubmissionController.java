@@ -6,6 +6,8 @@ import com.ENAA_Skill.user_service.services.SubmissionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/submissions")
 public class SubmissionController {
@@ -30,5 +32,10 @@ public class SubmissionController {
             Submission submission = submissionService.createSubmission(submissionRequest);
             return ResponseEntity.ok(submission);
         }
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Submission> getSubmission(@PathVariable Long id) {
+        return submissionService.findSubmissionById(id);
     }
 }
