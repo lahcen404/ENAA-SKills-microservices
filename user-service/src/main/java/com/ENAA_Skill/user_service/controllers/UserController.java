@@ -63,4 +63,11 @@ public class UserController {
     public Optional<User> checkUserExists(@PathVariable Long id){
        return userService.getUserById(id);
     }
+
+
+    @GetMapping("/{id}/verify-trainer")
+    public ResponseEntity<Void> verifyTrainerExists(@PathVariable Long id) {
+        userService.findUserByIdAndRole(id, "TRAINER");
+        return ResponseEntity.ok().build();
+    }
 }
