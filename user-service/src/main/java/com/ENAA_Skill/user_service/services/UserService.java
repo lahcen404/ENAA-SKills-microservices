@@ -47,9 +47,9 @@ public class UserService {
         return userRepositorie.findById(id);
     }
 
-    public Optional<User> findUserByIdAndRole(Long id, String role) {
-        return userRepositorie.findByIdAndRole(id, role);
-    }
+//    public Optional<User> findUserByIdAndRole(Long id, String user_type) {
+//        return userRepositorie.findByIdAndRole(id, role);
+//    }
 
     public String getValidationErrorMessage() {
         return "Invalid username or password";
