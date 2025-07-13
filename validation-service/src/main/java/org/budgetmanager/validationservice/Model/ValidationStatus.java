@@ -1,6 +1,6 @@
 package org.budgetmanager.validationservice.Model;
 
 public enum ValidationStatus {
-    VALIDE,
-    NON_VALIDE
+    VALIDATE,
+    NOT_VALIDATE
 }
