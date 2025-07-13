@@ -54,4 +54,8 @@ public class SubmissionService {
 
             return submissionRepositorie.save(submission);
         }
+
+        public Optional<Submission> findSubmissionById(Long id) {
+        return submissionRepositorie.findById(id);
+        }
     }
