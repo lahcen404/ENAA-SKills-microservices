@@ -27,12 +27,6 @@ public class BriefServiceImpl implements BriefService {
     public Brief createBrief(Brief brief) {
 
 
-        try {
-            trainerInterface.verifyTrainerExists(brief.getTrainerId());
-        } catch (Exception e) {
-            throw new RuntimeException("vaalidation failed");
-        }
-
         if (brief.getSkillIds() != null && !brief.getSkillIds().isEmpty()) {
             for (Long skillId : brief.getSkillIds()) {
                 briefInterface.getSkillById(skillId);
