@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients("org.budgetmanager.validationservice.client") // optional: specify package
 public class ValidationserviceApplication {
 
     public static void main(String[] args) {
