@@ -26,7 +26,7 @@ class BriefServiceImplTest {
 
         Long id = 1L;
         String title = "Brief 1";
-        List<Long> skills = List.of(10L, 20L, 30L);
+        List<Long> skills = List.of(1L,14L);
 
 
         Brief brief = new Brief();
@@ -37,6 +37,7 @@ class BriefServiceImplTest {
 
         Brief createdBrief = briefService.createBrief(brief);
 
+        assertNotNull(createdBrief.getId());
         assertEquals(id, createdBrief.getId());
         assertEquals(title, createdBrief.getTitle());
         assertEquals(skills, createdBrief.getSkillIds());
