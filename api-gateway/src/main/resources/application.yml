@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  application:
+      name: api-gateway
+
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: register-service
+              uri: lb://register-service
+              predicates:
+                  - Path=/api/auth/**
+
+
+            - id: user-service
+              uri: lb:/user-service
+              predicates:
+                - Path=/api/users/**
+
+
+            - id: skill-service
+              uri: lb:/skill-service
+              predicates:
+                - Path=/skill-service
+
+
+            - id: validation-service
+              uri: lb:/validation-service
+              predicates:
+                - Path=/validation-service
+
+
+            - id: brief-service
+              uri: lb:/brief-service
+              predicates:
+                - Path=/brief-service
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service:8765/eureka
