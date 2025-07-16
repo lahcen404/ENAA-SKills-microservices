@@ -1,7 +1,6 @@
+package org.budgetmanager.registersetvice.service;
 
-
-import com.ey.springboot3security.entity.UserInfo;
-
+import org.budgetmanager.registersetvice.entity.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,12 +11,12 @@ import java.util.stream.Collectors;
 
 public class UserInfoDetails implements UserDetails {
 
-    private String username; // Changed from 'name' to 'email' for clarity
+    private String username;
     private String password;
     private List<GrantedAuthority> authorities;
 
     public UserInfoDetails(UserInfo userInfo) {
-        this.username = userInfo.getEmail(); // Use email as username
+        this.username = userInfo.getEmail();
         this.password = userInfo.getPassword();
         this.authorities = List.of(userInfo.getRoles().split(","))
                 .stream()
@@ -28,6 +27,11 @@ public class UserInfoDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;
+    }
+
+    @Override
+    public String getPassword() {
+        return "";
     }
 
     @Override
