@@ -1,9 +1,11 @@
 package org.budgetmanager.registersetvice.service;
-
-import org.bouncycastle.jcajce.BCFKSLoadStoreParameter;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
@@ -26,7 +28,7 @@ public class JwtService {
                 .setSubject(email)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 30))
-                .signWith(getSignKey(), BCFKSLoadStoreParameter.SignatureAlgorithm.HS256)
+                .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
 
