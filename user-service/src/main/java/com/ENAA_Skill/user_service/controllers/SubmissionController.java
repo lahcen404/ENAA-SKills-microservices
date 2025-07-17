@@ -8,22 +8,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/submissions")
-public class SubmissionController {
 
-    private final SubmissionService submissionService;
-
-    public SubmissionController(SubmissionService submissionService) {
-        this.submissionService = submissionService;
-    }
     @RestController
     @RequestMapping("/api/submissions")
-    public class submissionController {
+    public class SubmissionController {
 
         private final SubmissionService submissionService;
 
-        public submissionController(SubmissionService submissionService) {
+        public SubmissionController(SubmissionService submissionService) {
             this.submissionService = submissionService;
         }
 
@@ -32,10 +24,12 @@ public class SubmissionController {
             Submission submission = submissionService.createSubmission(submissionRequest);
             return ResponseEntity.ok(submission);
         }
+
+        @GetMapping("/{id}")
+        public Optional<Submission> getSubmission(@PathVariable Long id) {
+            return submissionService.findSubmissionById(id);
+        }
     }
 
-    @GetMapping("/{id}")
-    public Optional<Submission> getSubmission(@PathVariable Long id) {
-        return submissionService.findSubmissionById(id);
-    }
-}
+
+

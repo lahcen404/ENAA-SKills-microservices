@@ -8,19 +8,16 @@ import java.util.List;
 
 @Entity
 public class Learner extends User {
-    // Default constructor
     public Learner() {
         super();
     }
 
-    // Constructor to easily create a Learner with basic details
     public Learner(String username, String email, String password) {
         super(username, email, password);
     }
 
     @OneToMany
-    @JsonIgnore // facultatif si tu ne veux pas exposer les submissions
-
+    @JsonIgnore
     private List<Submission> submissions;
 
     public List<Submission> getSubmissions() {
