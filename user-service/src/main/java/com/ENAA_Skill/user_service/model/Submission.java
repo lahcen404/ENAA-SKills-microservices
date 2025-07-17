@@ -24,8 +24,7 @@ public class Submission {
 
     @ManyToOne
     @JoinColumn(name = "learner_id")
-    @JsonIgnoreProperties("submissions") // 🛡️ bloque la boucle infinie
-
+    @JsonIgnoreProperties("submissions")
     private Learner learnerId;
 
 
