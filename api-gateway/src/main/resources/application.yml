@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-      name: api-gateway
+    name: api-gateway
 
 
   cloud:
@@ -14,31 +14,31 @@ spring:
             - id: register-service
               uri: lb://register-service
               predicates:
-                  - Path=/api/auth/**
+                - Path=/api/auth/**
 
 
             - id: user-service
-              uri: lb:/user-service
+              uri: lb://user-service
               predicates:
                 - Path=/api/users/**
 
 
             - id: skill-service
-              uri: lb:/skill-service
+              uri: lb://skill-service
               predicates:
-                - Path=/skill-service
+                - Path=/skill-service/**
 
 
             - id: validation-service
-              uri: lb:/validation-service
+              uri: lb://validation-service
               predicates:
-                - Path=/validation-service
+                - Path=/validation-service/**
 
 
             - id: brief-service
-              uri: lb:/brief-service
+              uri: lb://brief-service
               predicates:
-                - Path=/brief-service
+                - Path=/brief-service/**
 
 
 
