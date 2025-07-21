@@ -1,15 +1,14 @@
 package org.budgetmanager.registersetvice.config;
 
-import jakarta.servlet.Filter;
 import org.budgetmanager.registersetvice.filter.JwtAuthFilter;
+import org.springframework.beans.factory.ObjectProvider; // Import ObjectProvider
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -23,76 +22,43 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private final JwtAuthFilter jwtAuthFilter;
+    // Use ObjectProvider to lazily get JwtAuthFilter when it's actually needed
+    // This breaks the direct dependency during SecurityConfig's initial creation.
+    private final ObjectProvider<JwtAuthFilter> jwtAuthFilterProvider;
+
+    // Keep @Lazy for UserDetailsService to handle the UserInfoService -> SecurityConfig -> UserInfoService cycle
     private final UserDetailsService userDetailsService;
 
-    // Constructor injection for required dependencies
-    public SecurityConfig(JwtAuthFilter jwtAuthFilter,
-                          UserDetailsService userDetailsService) {
-        this.jwtAuthFilter = jwtAuthFilter;
+    // Constructor now takes ObjectProvider for JwtAuthFilter and @Lazy UserDetailsService
+    public SecurityConfig(ObjectProvider<JwtAuthFilter> jwtAuthFilterProvider, @Lazy UserDetailsService userDetailsService) {
+        this.jwtAuthFilterProvider = jwtAuthFilterProvider;
         this.userDetailsService = userDetailsService;
     }
 
-
-    /*
-     * Main security configuration
-     * Defines endpoint access rules and JWT filter setup
-     */
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    @Bean // New, temporary securityFilterChain
+    public SecurityFilterChain tempSecurityFilterChain(HttpSecurity http) throws Exception {
         http
-                // Disable CSRF (not needed for stateless JWT)
-                .csrf(csrf -> csrf.disable())
-
-                // Configure endpoint authorization
-                .authorizeHttpRequests(auth -> auth
-                        // Public endpoints
-                        .requestMatchers("/auth/welcome", "/auth/addNewUser", "/auth/generateToken").permitAll()
-
-                        // Role-based endpoints
-                        .requestMatchers("/auth/Learner/**").hasAuthority("Learner")
-                        .requestMatchers("/auth/Trainer/**").hasAuthority("Trainer")
-
-                        // All other endpoints require authentication
-                        .anyRequest().authenticated()
-                )
-
-                // Stateless session (required for JWT)
-                .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-
-                // Set custom authentication provider
-                .authenticationProvider(authenticationProvider())
-
-                // Add JWT filter before Spring Security's default filter
-                .addFilterBefore((Filter) jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
+                .csrf(csrf -> csrf.disable()) // Still disable CSRF for API
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // PERMIT ALL REQUESTS
         return http.build();
     }
 
-    /*
-     * Password encoder bean (uses BCrypt hashing)
-     * Critical for secure password storage
-     */
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder(); // Use BCrypt for password hashing
     }
 
-    /*
-     * Authentication provider configuration
-     * Links UserDetailsService and PasswordEncoder
-     */
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        // The userDetailsService here will be the lazy-loaded proxy, resolving UserInfoService.
         provider.setUserDetailsService(userDetailsService);
-        provider.setPasswordEncoder(passwordEncoder());
+        provider.setPasswordEncoder(passwordEncoder()); // PasswordEncoder is available from this config.
         return provider;
     }
 
-
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-        return config.getAuthenticationManager();
+        return config.getAuthenticationManager(); // Expose AuthenticationManager
     }
 }

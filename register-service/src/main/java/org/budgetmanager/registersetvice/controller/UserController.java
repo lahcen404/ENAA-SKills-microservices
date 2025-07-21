@@ -5,13 +5,10 @@ import org.budgetmanager.registersetvice.entity.AuthRequest;
 import org.budgetmanager.registersetvice.entity.UserInfo;
 import org.budgetmanager.registersetvice.service.JwtService;
 import org.budgetmanager.registersetvice.service.UserInfoService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,11 +16,9 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
 
-    private UserInfoService service;
-
-    private JwtService jwtService;
-
-    private AuthenticationManager authenticationManager;
+    private final UserInfoService service;
+    private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
 
     @GetMapping("/welcome")
     public String welcome() {
@@ -35,7 +30,6 @@ public class UserController {
         return service.addUser(userInfo);
     }
 
-
     @PostMapping("/generateToken")
     public String authenticateAndGetToken(@RequestBody AuthRequest authRequest) {
         Authentication authentication = authenticationManager.authenticate(
@@ -46,6 +40,5 @@ public class UserController {
         } else {
             throw new UsernameNotFoundException("Invalid user request!");
         }
-
     }
 }
