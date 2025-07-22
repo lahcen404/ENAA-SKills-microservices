@@ -10,13 +10,13 @@ import java.util.function.Predicate;
 public class RouteValidator {
 
     public static final List<String> openApiEndpoints = List.of(
-            "/api/auth/register",
-            "/api/auth/token",
+            "/api/auth/addNewUser",
+            "/api/auth/generateToken",
             "/eureka"
     );
 
 
-    // checks if path is NOT in our public list. If it's not in the public list, it means the route is secured.
+    // checks if path is not in public list
     public Predicate<ServerHttpRequest> isSecured =
             request -> openApiEndpoints
                     .stream()
