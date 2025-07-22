@@ -7,7 +7,6 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- THIS IS THE FIX: Changed version to a compatible one -->
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
@@ -20,8 +19,13 @@
 
 	<properties>
 		<java.version>17</java.version>
-		<!-- This version of Spring Cloud is compatible with Spring Boot 3.2.x -->
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
+
+		<!-- SonarQube Properties updated to use a token -->
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+		<!-- You need to generate a token from your SonarQube dashboard -->
+		<!-- and paste it here. See the guide on the right. -->
+		<sonar.token>sqp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</sonar.token>
 	</properties>
 
 	<dependencyManagement>
@@ -29,7 +33,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>2023.0.1</version> <!-- Compatible avec Spring Boot 3.2.x -->
+				<version>2023.0.1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -38,8 +42,7 @@
 
 	<dependencies>
 
-		<!--  eureka -->
-
+		<!-- Eureka Client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -50,7 +53,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -80,15 +82,14 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- swagger -->
-
+		<!-- Swagger/OpenAPI -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.5.0</version>
 		</dependency>
 
-
+		<!-- H2 Database for testing -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -105,10 +106,24 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 		</dependency>
+
+		<!-- SonarQube Scanner -->
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.10.0.2594</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- SonarQube Plugin -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.10.0.2594</version>
+			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

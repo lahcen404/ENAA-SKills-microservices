@@ -1,6 +1,5 @@
 package com.ENAA_Skills.brief_service.service.serviceImpl;
 
-import com.ENAA_Skills.brief_service.dto.SkillDTO;
 import com.ENAA_Skills.brief_service.model.Brief;
 import com.ENAA_Skills.brief_service.service.BriefService;
 import org.junit.jupiter.api.Test;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
