@@ -12,8 +12,7 @@ public class Brief {
     private Long id;
     private String title;
 
-//    @Column(nullable = false)
-//    private Long trainerId;
+
     @ElementCollection
     List<Long> skillIds = new ArrayList<>();
 
@@ -52,11 +51,5 @@ public class Brief {
         this.skillIds = skillIds;
     }
 
-//    public Long getTrainerId() {
-//        return trainerId;
-//    }
-//
-//    public void setTrainerId(Long trainerId) {
-//        this.trainerId = trainerId;
-//    }
+
 }
