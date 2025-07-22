@@ -4,8 +4,6 @@ import com.ENAA_Skill.user_service.dto.RegistrationRequest;
 import com.ENAA_Skill.user_service.model.Learner;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -30,11 +28,4 @@ class UserServiceTest {
         assertThat(savedLearner.getEmail()).isEqualTo("test@example.com");
     }
 
-    @Test
-    void registerTrainer() {
-    }
-
-    @Test
-    void getUserById() {
-    }
 }

@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping("/learner")
-    public ResponseEntity<?> registerLearner(@Valid @RequestBody RegistrationRequest registrationRequest) {
+    public ResponseEntity<MessageResponse> registerLearner(@Valid @RequestBody RegistrationRequest registrationRequest) {
         try {
             Optional<Learner> registeredLearnerOptional = Optional.ofNullable(userService.registerLearner(registrationRequest));
 
@@ -41,7 +41,7 @@ public class UserController {
         }
     }
     @PostMapping("/Trainer")
-    public ResponseEntity<?> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
+    public ResponseEntity<MessageResponse> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
         try {
             Optional<Trainer> registeredTrainerOptional = Optional.ofNullable(userService.registerTrainer(registrationRequest));
 
@@ -64,10 +64,4 @@ public class UserController {
        return userService.getUserById(id);
     }
 
-
-//    @GetMapping("/{id}/verify-trainer")
-//    public ResponseEntity<Void> verifyTrainerExists(@PathVariable Long id) {
-//        userService.findUserByIdAndRole(id, "Trainer");
-//        return ResponseEntity.ok().build();
-//    }
 }
