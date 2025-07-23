@@ -1,10 +1,10 @@
-package com.ENAA_Skill.user_service.services;
+package com.enaa_skill.user_service.services;
 
-import com.ENAA_Skill.user_service.dto.RegistrationRequest;
-import com.ENAA_Skill.user_service.model.Learner;
-import com.ENAA_Skill.user_service.model.Trainer;
-import com.ENAA_Skill.user_service.model.User;
-import com.ENAA_Skill.user_service.repositories.UserRepositorie;
+import com.enaa_skill.user_service.dto.RegistrationRequest;
+import com.enaa_skill.user_service.model.Learner;
+import com.enaa_skill.user_service.model.Trainer;
+import com.enaa_skill.user_service.model.User;
+import com.enaa_skill.user_service.repositories.UserRepositorie;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

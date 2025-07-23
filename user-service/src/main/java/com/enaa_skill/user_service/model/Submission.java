@@ -1,4 +1,4 @@
-package com.ENAA_Skill.user_service.model;
+package com.enaa_skill.user_service.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

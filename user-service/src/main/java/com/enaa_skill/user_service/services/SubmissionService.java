@@ -1,11 +1,11 @@
-package com.ENAA_Skill.user_service.services;
+package com.enaa_skill.user_service.services;
 
-import com.ENAA_Skill.user_service.dto.SubmissionRequest;
-import com.ENAA_Skill.user_service.feing.UserInterface;
-import com.ENAA_Skill.user_service.model.Learner;
-import com.ENAA_Skill.user_service.model.Submission;
-import com.ENAA_Skill.user_service.repositories.SubmissionRepositorie;
-import com.ENAA_Skill.user_service.repositories.UserRepositorie;
+import com.enaa_skill.user_service.dto.SubmissionRequest;
+import com.enaa_skill.user_service.feing.UserInterface;
+import com.enaa_skill.user_service.model.Learner;
+import com.enaa_skill.user_service.model.Submission;
+import com.enaa_skill.user_service.repositories.SubmissionRepositorie;
+import com.enaa_skill.user_service.repositories.UserRepositorie;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

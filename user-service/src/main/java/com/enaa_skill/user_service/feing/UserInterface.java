@@ -1,6 +1,6 @@
-package com.ENAA_Skill.user_service.feing;
+package com.enaa_skill.user_service.feing;
 
-import com.ENAA_Skill.user_service.dto.BriefDto;
+import com.enaa_skill.user_service.dto.BriefDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

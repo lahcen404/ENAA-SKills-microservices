@@ -1,7 +1,7 @@
-package com.ENAA_Skill.user_service.services;
+package com.enaa_skill.user_service.services;
 
-import com.ENAA_Skill.user_service.dto.RegistrationRequest;
-import com.ENAA_Skill.user_service.model.Learner;
+import com.enaa_skill.user_service.dto.RegistrationRequest;
+import com.enaa_skill.user_service.model.Learner;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

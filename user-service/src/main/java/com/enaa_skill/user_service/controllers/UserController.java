@@ -1,11 +1,11 @@
-package com.ENAA_Skill.user_service.controllers;
+package com.enaa_skill.user_service.controllers;
 
-import com.ENAA_Skill.user_service.dto.MessageResponse;
-import com.ENAA_Skill.user_service.dto.RegistrationRequest;
-import com.ENAA_Skill.user_service.model.Learner;
-import com.ENAA_Skill.user_service.model.Trainer;
-import com.ENAA_Skill.user_service.model.User;
-import com.ENAA_Skill.user_service.services.UserService;
+import com.enaa_skill.user_service.dto.MessageResponse;
+import com.enaa_skill.user_service.dto.RegistrationRequest;
+import com.enaa_skill.user_service.model.Learner;
+import com.enaa_skill.user_service.model.Trainer;
+import com.enaa_skill.user_service.model.User;
+import com.enaa_skill.user_service.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

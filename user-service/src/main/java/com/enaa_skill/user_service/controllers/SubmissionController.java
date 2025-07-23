@@ -1,8 +1,8 @@
-package com.ENAA_Skill.user_service.controllers;
+package com.enaa_skill.user_service.controllers;
 
-import com.ENAA_Skill.user_service.dto.SubmissionRequest;
-import com.ENAA_Skill.user_service.model.Submission;
-import com.ENAA_Skill.user_service.services.SubmissionService;
+import com.enaa_skill.user_service.dto.SubmissionRequest;
+import com.enaa_skill.user_service.model.Submission;
+import com.enaa_skill.user_service.services.SubmissionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

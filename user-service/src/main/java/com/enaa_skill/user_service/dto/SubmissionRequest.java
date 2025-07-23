@@ -1,4 +1,4 @@
-package com.ENAA_Skill.user_service.dto;
+package com.enaa_skill.user_service.dto;
 
 import java.time.LocalDateTime;
 public class SubmissionRequest {
