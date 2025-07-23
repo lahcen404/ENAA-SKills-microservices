@@ -39,6 +39,7 @@ public class SubmissionService {
 
             var briefOpt = userInterface.getBriefById(submissionRequest.getBriefId());
 
+
             if (briefOpt.isEmpty()) {
                 throw new IllegalArgumentException("Brief not found");
             }
