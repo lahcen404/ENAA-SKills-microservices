@@ -1,7 +1,0 @@
-package com.ENAA_Skill.user_service.model;
-
-import jakarta.persistence.Entity;
-
-@Entity
-public class Trainer extends User {
-}
