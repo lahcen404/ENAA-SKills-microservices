@@ -25,9 +25,7 @@ public class SubmissionService {
     }
 
     public Submission createSubmission(SubmissionRequest submissionRequest) {
-            System.out.println("==> learnerId = " + submissionRequest.getLearnerId());
-            System.out.println("==> briefId = " + submissionRequest.getBriefId());
-            System.out.println("==> submittedate = " + submissionRequest.getSubmittedate());
+
 
             var userOpt = userRepositorie.findById(submissionRequest.getLearnerId());
 
@@ -40,7 +38,7 @@ public class SubmissionService {
             }
 
             var briefOpt = userInterface.getBriefById(submissionRequest.getBriefId());
-            System.out.println("==> brief found = " + briefOpt.isPresent());
+
 
             if (briefOpt.isEmpty()) {
                 throw new IllegalArgumentException("Brief not found");

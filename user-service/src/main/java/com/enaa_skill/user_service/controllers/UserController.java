@@ -25,6 +25,37 @@ public class UserController {
     @PostMapping("/learner")
     public ResponseEntity<MessageResponse> registerLearner(@Valid @RequestBody RegistrationRequest registrationRequest) {
         try {
+            Learner registeredLearner = userService.registerLearner(registrationRequest);
+            if (registeredLearner != null) {
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(new MessageResponse("Learner " + registeredLearner.getUsername() + " (ID: " + registeredLearner.getId() + ") registered successfully!"));
+            } else {
+                // Code de secours si jamais `registerLearner` retourne null
+                String errorMessage = userService.getValidationErrorMessage();
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body(new MessageResponse("Registration failed: " + errorMessage));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new MessageResponse("An error occurred: " + e.getMessage()));
+        }
+    }
+
+    @PostMapping("/Trainer")
+    public ResponseEntity<MessageResponse> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
+        try {
+            Trainer registeredTrainer = userService.registerTrainer(registrationRequest);
+            if (registeredTrainer != null) {
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
+            } else {
+                String errorMessage = userService.getValidationErrorMessage();
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body(new MessageResponse("Registration failed: " + errorMessage));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new MessageResponse("An error occurred: " + e.getMessage()));
             Optional<Learner> registeredLearnerOptional = Optional.ofNullable(userService.registerLearner(registrationRequest));
 
             if (registeredLearnerOptional.isPresent()) {
@@ -60,8 +91,11 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Optional<User> checkUserExists(@PathVariable Long id){
-       return userService.getUserById(id);
+    public ResponseEntity<User> checkUserExists(@PathVariable Long id) {
+        Optional<User> userOptional = userService.getUserById(id);
+        return userOptional.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+
     }
 
 }
