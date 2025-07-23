@@ -56,6 +56,37 @@ public class UserController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An error occurred: " + e.getMessage()));
+            Optional<Learner> registeredLearnerOptional = Optional.ofNullable(userService.registerLearner(registrationRequest));
+
+            if (registeredLearnerOptional.isPresent()) {
+                Learner registeredLearner = registeredLearnerOptional.get();
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(new MessageResponse("Learner " + registeredLearner.getUsername() + " (ID: " + registeredLearner.getId() + ") registered successfully!"));
+            } else {
+                String errorMessage = userService.getValidationErrorMessage(); // Get the specific error message
+                return ResponseEntity.badRequest().body(new MessageResponse(errorMessage != null ? errorMessage : "Registration failed due to invalid input."));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
+        }
+    }
+    @PostMapping("/Trainer")
+    public ResponseEntity<MessageResponse> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
+        try {
+            Optional<Trainer> registeredTrainerOptional = Optional.ofNullable(userService.registerTrainer(registrationRequest));
+
+            if (registeredTrainerOptional.isPresent()) {
+                Trainer registeredTrainer = registeredTrainerOptional.get();
+                return ResponseEntity.status(HttpStatus.CREATED)
+                        .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
+            } else {
+                String errorMessage = userService.getValidationErrorMessage(); // Get the specific error message
+                return ResponseEntity.badRequest().body(new MessageResponse(errorMessage != null ? errorMessage : "Registration failed due to invalid input."));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new MessageResponse("An unexpected error occurred during registration: " + e.getMessage()));
         }
     }
 
@@ -64,6 +95,7 @@ public class UserController {
         Optional<User> userOptional = userService.getUserById(id);
         return userOptional.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+
     }
 
 }
