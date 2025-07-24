@@ -18,10 +18,14 @@ pipeline {
         stage('Build & Test') {
 			steps {
 				// run command tools compile
-                echo 'Building the application...'
-                sh './mvnw clean package'
+
+				echo 'Building the brief-service application...'
+                dir('brief-service') {
+					sh './mvnw clean package'
+                }
             }
         }
+
         stage('Archive Artifact') {
 			steps {
 				// find the built .jar file
