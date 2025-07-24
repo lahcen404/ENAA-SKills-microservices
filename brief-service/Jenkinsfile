@@ -19,9 +19,11 @@ pipeline {
 			steps {
 				// run command tools compile
 
-				echo 'Building the brief-service application...'
+             echo 'Building the brief-service application...'
                 dir('brief-service') {
-					sh './mvnw clean package'
+					// fixes the "Permission denied" error
+                    sh 'chmod +x mvnw'
+                    sh './mvnw clean package'
                 }
             }
         }
@@ -30,7 +32,7 @@ pipeline {
 			steps {
 				// find the built .jar file
                 echo 'Archiving the artifact...'
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'brief-service/target/*.jar', fingerprint: true
             }
         }
     }
