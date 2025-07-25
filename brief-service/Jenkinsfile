@@ -2,8 +2,6 @@ pipeline {
     // comment for testing webhoook2
     agent any // run on any machine
 
-    def appImage
-
     tools {
         // softwares needs in build
         jdk 'jdk17'
@@ -44,7 +42,8 @@ pipeline {
                 echo 'Building the Docker image...'
                 // build image using Dockerfile in the 'brief-service' directory
                 script {
-                    appImage = docker.build('lahcen404/brief-service', 'brief-service')
+                    // build the image
+                    docker.build('lahcen404/brief-service', 'brief-service')
                 }
             }
         }
@@ -54,8 +53,9 @@ pipeline {
                 echo 'Pushing the Docker image...'
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        appImage.push("${env.BUILD_NUMBER}")
-                        appImage.push("latest")
+                        // Get image by its name and then push it
+                        docker.image('lahcen404/brief-service').push("${env.BUILD_NUMBER}")
+                        docker.image('lahcen404/brief-service').push("latest")
                     }
                 }
             }
