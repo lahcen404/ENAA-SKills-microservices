@@ -1,53 +1,29 @@
 pipeline {
-    // comment for testing webhoook2
+	// comment for testing webhoook2
 	agent any // run on any machine
 
     tools {
-        // softwares needs in build
+		// softwares needs in build
         jdk 'jdk17'
         maven 'maven3'
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                // download code from git Repo
+		stage('Checkout Code') {
+			steps {
+				// download code from git Repo
                 echo 'Checking out code...'
                 checkout scm
             }
         }
 
-             // --- NEW STAGE ---
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building the Docker image...'
-                // build image using the Dockerfile in the 'brief-service' directory
-                script {
-                    // Replace 'your-dockerhub-username' with your actual Docker Hub username
-                    def appImage = docker.build('your-dockerhub-username/brief-service', 'brief-service')
-                }
-            }
-        }
-
-        // --- NEW STAGE ---
-        stage('Push Docker Image') {
-            steps {
-                echo 'Pushing the Docker image...'
-                // You must configure Docker Hub credentials in Jenkins with an ID like 'dockerhub-credentials'
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        appImage.push("${env.BUILD_NUMBER}")
-                        appImage.push("latest")
-                    }
-                }
-            }
         stage('Build & Test') {
-                steps {
-                    // run command tools compile
+			steps {
+				// run command tools compile
 
              echo 'Building the brief-service application...'
                 dir('brief-service') {
-                        // fixes the "Permission denied" error
+					// fixes the "Permission denied" error
                     sh 'chmod +x mvnw'
                     sh './mvnw clean package -DskipTests'
                 }
@@ -55,12 +31,11 @@ pipeline {
         }
 
         stage('Archive Artifact') {
-                steps {
-                    // find the built .jar file
+			steps {
+				// find the built .jar file
                 echo 'Archiving the artifact...'
                 archiveArtifacts artifacts: 'brief-service/target/*.jar', fingerprint: true
             }
         }
     }
-}
 }
