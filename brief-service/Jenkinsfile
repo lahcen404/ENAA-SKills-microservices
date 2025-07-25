@@ -1,6 +1,6 @@
 pipeline {
     // comment for testing webhoook2
-    agent any // run on any machine
+	agent any // run on any machine
 
     tools {
         // softwares needs in build
@@ -17,12 +17,35 @@ pipeline {
             }
         }
 
-        stage('Build & Test') {
+
+        stage('Build Docker Image') {
             steps {
-                // run command tools compile
-                echo 'Building the brief-service application...'
+                echo 'Building the Docker image...'
+                // build image using Dockerfile in the 'brief-service' directory
+                script {
+                    def appImage = docker.build('lahcen404/brief-service', 'brief-service')
+                }
+            }
+        }
+
+
+        stage('Push Docker Image') {
+            steps {
+                echo 'Pushing the Docker image...'
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
+                        appImage.push("${env.BUILD_NUMBER}")
+                        appImage.push("latest")
+                    }
+                }
+            }
+        stage('Build & Test') {
+                steps {
+                    // run command tools compile
+
+             echo 'Building the brief-service application...'
                 dir('brief-service') {
-                    // fixes the "Permission denied" error
+                        // fixes the "Permission denied" error
                     sh 'chmod +x mvnw'
                     sh './mvnw clean package -DskipTests'
                 }
@@ -30,35 +53,12 @@ pipeline {
         }
 
         stage('Archive Artifact') {
-            steps {
-                // find the built .jar file
+                steps {
+                    // find the built .jar file
                 echo 'Archiving the artifact...'
                 archiveArtifacts artifacts: 'brief-service/target/*.jar', fingerprint: true
             }
         }
-
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building the Docker image...'
-                // build image using Dockerfile in the 'brief-service' directory
-                script {
-                    // build the image
-                    docker.build('lahcen404/brief-service', 'brief-service')
-                }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                echo 'Pushing the Docker image...'
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        // Get image by its name and then push it
-                        docker.image('lahcen404/brief-service').push("${env.BUILD_NUMBER}")
-                        docker.image('lahcen404/brief-service').push("latest")
-                    }
-                }
-            }
-        }
     }
+}
 }
