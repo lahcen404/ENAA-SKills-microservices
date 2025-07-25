@@ -17,21 +17,23 @@ pipeline {
             }
         }
 
-
+             // --- NEW STAGE ---
         stage('Build Docker Image') {
             steps {
                 echo 'Building the Docker image...'
-                // build image using Dockerfile in the 'brief-service' directory
+                // build image using the Dockerfile in the 'brief-service' directory
                 script {
-                    def appImage = docker.build('lahcen404/brief-service', 'brief-service')
+                    // Replace 'your-dockerhub-username' with your actual Docker Hub username
+                    def appImage = docker.build('your-dockerhub-username/brief-service', 'brief-service')
                 }
             }
         }
 
-
+        // --- NEW STAGE ---
         stage('Push Docker Image') {
             steps {
                 echo 'Pushing the Docker image...'
+                // You must configure Docker Hub credentials in Jenkins with an ID like 'dockerhub-credentials'
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
                         appImage.push("${env.BUILD_NUMBER}")
