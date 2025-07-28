@@ -1,0 +1,36 @@
+pipeline {
+	// comment for testing webhook2
+    agent any // run on any machine
+
+    tools {
+		// softwares needed in build
+        jdk 'jdk17'
+        maven 'maven3'
+    }
+
+    stages {
+		stage('Checkout Code') {
+			steps {
+				echo 'Checking out code...'
+                checkout scm
+            }
+        }
+
+        stage('Build & Test') {
+			steps {
+				echo 'Building the user-service application...'
+                dir('user-service') {
+					// Exécution du wrapper Maven sous Windows
+                    bat 'mvnw.cmd clean package -DskipTests'
+                }
+            }
+        }
+
+        stage('Archive Artifact') {
+			steps {
+				echo 'Archiving the artifact...'
+                archiveArtifacts artifacts: 'user-service/target/*.jar', fingerprint: true
+            }
+        }
+    }
+}
