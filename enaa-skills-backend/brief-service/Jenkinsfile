@@ -1,39 +1,39 @@
 pipeline {
-	// comment for testing webhoook2
-	agent any // run on any machine
+    agent any
 
     tools {
-		// softwares needs in build
         jdk 'jdk17'
         maven 'maven3'
     }
 
     stages {
-		stage('Checkout Code') {
-			steps {
-				// download code from git Repo
+        stage('Checkout Code') {
+            steps {
                 echo 'Checking out code...'
                 checkout scm
             }
         }
 
-        stage('Build & Test') {
-			steps {
-				// run command tools compile
+        stage('Build brief-service') {
+            steps {
+                // This dir command ensures the build runs from the correct project root
+                dir('enaa-skills-backend') {
+                    echo "--- Building inside: "
 
-             echo 'Building the brief-service application...'
-                dir('brief-service') {
-					// fixes the "Permission denied" error
+                    // Grant execute permission to the Maven Wrapper
                     sh 'chmod +x mvnw'
-                    sh './mvnw clean package -DskipTests'
+
+                    // Execute the Maven build for the 'brief-service' module
+                    // The -f flag points to the module's specific pom.xml
+                    sh './mvnw -f brief-service/pom.xml clean package -DskipTests'
                 }
             }
         }
 
         stage('Archive Artifact') {
-			steps {
-				// find the built .jar file
+            steps {
                 echo 'Archiving the artifact...'
+                // The path is relative to the workspace root
                 archiveArtifacts artifacts: 'enaa-skills-backend/brief-service/target/*.jar', fingerprint: true
             }
         }
