@@ -1,12 +1,15 @@
 pipeline {
+    // run on any machine
     agent any
 
     tools {
+        // tools needs in build
         jdk 'jdk17'
         maven 'maven3'
     }
 
     stages {
+        // get code from github
         stage('Checkout Code') {
             steps {
                 echo 'Checking out code...'
@@ -16,12 +19,11 @@ pipeline {
 
         stage('Build brief-service') {
             steps {
-                // This dir command ensures the build runs from the correct project root
+                // ensure the build runs from the correct project root
                 dir('enaa-skills-backend') {
                     echo "--- Building inside: "
 
-                    // Execute the Maven build for the 'brief-service' module using the globally configured Maven tool
-                    // The -f flag points to the module's specific pom.xml
+                    // build the app
                     sh 'mvn -f brief-service/pom.xml clean package -DskipTests'
                 }
             }
@@ -29,8 +31,8 @@ pipeline {
 
         stage('Archive Artifact') {
             steps {
+                // find the built .jar file
                 echo 'Archiving the artifact...'
-                // The path is relative to the workspace root
                 archiveArtifacts artifacts: 'enaa-skills-backend/brief-service/target/*.jar', fingerprint: true
             }
         }
