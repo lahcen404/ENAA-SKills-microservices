@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="brief-service-0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/enaa-skills-backend/brief-service/target/brief-service-0.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

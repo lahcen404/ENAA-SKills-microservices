@@ -1,0 +1,202 @@
+services:
+  # 1. Infrastructure Services
+  discovery-service:
+    build:
+      context: ./discovery-service
+    container_name: discovery-service
+    restart: unless-stopped
+    ports:
+      - "8761:8761" # Standard Eureka port
+    networks:
+      - enaa-network
+
+  # 2. Database Services
+  skill-db:
+    image: 'mysql:8.0'
+    container_name: skill-db
+    restart: unless-stopped
+    ports:
+      - "3310:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=skill_db
+    volumes:
+      - skill-db-data:/var/lib/mysql
+    networks:
+      - enaa-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  user-db:
+    image: 'mysql:8.0'
+    container_name: user-db
+    restart: unless-stopped
+    ports:
+      - "3311:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=user_db
+    volumes:
+      - user-db-data:/var/lib/mysql
+    networks:
+      - enaa-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  validation-db:
+    image: 'mysql:8.0'
+    container_name: validation-db
+    restart: unless-stopped
+    ports:
+      - "3312:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=validation_db
+    volumes:
+      - validation-db-data:/var/lib/mysql
+    networks:
+      - enaa-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  brief-db:
+    image: 'mysql:8.0'
+    container_name: brief-db
+    restart: unless-stopped
+    ports:
+      - "3313:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=brief_db
+    volumes:
+      - brief-db-data:/var/lib/mysql
+    networks:
+      - enaa-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+
+  # 3. Backend Microservices
+  skill-service:
+    build:
+      context: ./skill-service
+    container_name: skill-service
+    restart: unless-stopped
+    ports:
+      - "8083:8083"
+    depends_on:
+      skill-db:
+        condition: service_healthy
+      discovery-service:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8083
+      - SPRING_DATASOURCE_URL=jdbc:mysql://skill-db:3306/skill_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - enaa-network
+
+  user-service:
+    build:
+      context: ./user-service
+    container_name: user-service
+    restart: unless-stopped
+    ports:
+      - "8082:8082"
+    depends_on:
+      user-db:
+        condition: service_healthy
+      discovery-service:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8082
+      - SPRING_DATASOURCE_URL=jdbc:mysql://user-db:3306/user_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - enaa-network
+
+  validation-service:
+    build:
+      context: ./validation-service
+    container_name: validation-service
+    restart: unless-stopped
+    ports:
+      - "8084:8084"
+    depends_on:
+      validation-db:
+        condition: service_healthy
+      discovery-service:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8084
+      - SPRING_DATASOURCE_URL=jdbc:mysql://validation-db:3306/validation_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - enaa-network
+
+  brief-service:
+    build:
+      context: ./brief-service
+    container_name: brief-service
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    depends_on:
+      brief-db:
+        condition: service_healthy
+      discovery-service:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8081
+      - SPRING_DATASOURCE_URL=jdbc:mysql://brief-db:3306/brief_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - enaa-network
+
+
+  # 4. API Gateway
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery-service
+      - brief-service
+      - skill-service
+      - user-service
+      - validation-service
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    networks:
+      - enaa-network
+
+# Named volumes to persist data
+volumes:
+  skill-db-data:
+  user-db-data:
+  validation-db-data:
+  brief-db-data:
+
+# A dedicated network for all services
+networks:
+  enaa-network:
+    driver: bridge
