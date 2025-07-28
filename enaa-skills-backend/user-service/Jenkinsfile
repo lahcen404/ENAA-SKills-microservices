@@ -24,7 +24,7 @@ pipeline {
 					echo "--- Building inside: "
 
                     // build the app
-                    sh 'mvn -f user-service/pom.xml clean package -DskipTests'
+                    bat 'mvn -f user-service/pom.xml clean package -DskipTests'
                 }
             }
         }
