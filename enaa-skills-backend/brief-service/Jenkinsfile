@@ -20,12 +20,9 @@ pipeline {
                 dir('enaa-skills-backend') {
                     echo "--- Building inside: "
 
-                    // Grant execute permission to the Maven Wrapper
-                    sh 'chmod +x mvnw'
-
-                    // Execute the Maven build for the 'brief-service' module
+                    // Execute the Maven build for the 'brief-service' module using the globally configured Maven tool
                     // The -f flag points to the module's specific pom.xml
-                    sh './mvnw -f brief-service/pom.xml clean package -DskipTests'
+                    sh 'mvn -f brief-service/pom.xml clean package -DskipTests'
                 }
             }
         }
