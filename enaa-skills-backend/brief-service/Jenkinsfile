@@ -23,21 +23,23 @@ pipeline {
              echo 'Building the brief-service application...'
 
              // --- DEBUGGING ---
-             // Let's see where Jenkins is running this script from.
-             // We suspect it's inside the 'brief-service' directory.
-             echo "--- Current Directory Info ---"
+             echo "--- Current Directory is: ---"
              sh 'pwd'
-             sh 'echo "--- Listing Parent Directory Contents (where mvnw should be) ---"'
-             sh 'ls -la ..'
-             echo "--- End Directory Info ---"
+             echo "--- Listing contents to confirm new structure: ---"
+             sh 'ls -la'
 
-             // Grant execute permission to mvnw, which is in the parent directory ('..')
-             sh 'chmod +x ../mvnw'
+             // Change into the backend directory where the project now lives
+             dir('enaa-skills-backend') {
+                    echo "--- Now running commands inside: $(pwd) ---"
+                sh 'ls -la'
 
-             // Run mvnw from the parent directory.
-             // The '-f pom.xml' flag will resolve to the pom.xml in the current directory,
-             // which is 'brief-service', and this is correct.
-             sh '../mvnw -f pom.xml clean package -DskipTests'
+                // Grant execute permission to mvnw, which is in the current directory.
+                sh 'chmod +x mvnw'
+
+                // Run mvnw from the enaa-skills-backend directory, telling it to build the 'brief-service' module.
+                // The -f flag points to the module's specific pom.xml file.
+                sh './mvnw -f brief-service/pom.xml clean package -DskipTests'
+             }
             }
         }
 
@@ -45,8 +47,8 @@ pipeline {
             steps {
                 // find the built .jar file
                 echo 'Archiving the artifact...'
-                // Since the script runs inside 'brief-service', the path to the artifact is now relative.
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                // The path to the artifact must now include the new parent directory.
+                archiveArtifacts artifacts: 'enaa-skills-backend/brief-service/target/*.jar', fingerprint: true
             }
         }
     }
