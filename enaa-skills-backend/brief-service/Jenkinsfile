@@ -22,12 +22,22 @@ pipeline {
                 // run command tools compile
              echo 'Building the brief-service application...'
 
-             // Grant execute permission to mvnw located at the root
-             sh 'chmod +x mvnw'
+             // --- DEBUGGING ---
+             // Let's see where Jenkins is running this script from.
+             // We suspect it's inside the 'brief-service' directory.
+             echo "--- Current Directory Info ---"
+             sh 'pwd'
+             sh 'echo "--- Listing Parent Directory Contents (where mvnw should be) ---"'
+             sh 'ls -la ..'
+             echo "--- End Directory Info ---"
 
-             // Run mvnw from the root, but specify the pom.xml for the brief-service module
-             // The -f flag tells Maven which POM file to use.
-             sh './mvnw -f brief-service/pom.xml clean package -DskipTests'
+             // Grant execute permission to mvnw, which is in the parent directory ('..')
+             sh 'chmod +x ../mvnw'
+
+             // Run mvnw from the parent directory.
+             // The '-f pom.xml' flag will resolve to the pom.xml in the current directory,
+             // which is 'brief-service', and this is correct.
+             sh '../mvnw -f pom.xml clean package -DskipTests'
             }
         }
 
@@ -35,8 +45,8 @@ pipeline {
             steps {
                 // find the built .jar file
                 echo 'Archiving the artifact...'
-                // This path is correct because it's relative to the workspace root
-                archiveArtifacts artifacts: 'brief-service/target/*.jar', fingerprint: true
+                // Since the script runs inside 'brief-service', the path to the artifact is now relative.
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
     }
