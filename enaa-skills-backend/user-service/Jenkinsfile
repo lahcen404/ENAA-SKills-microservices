@@ -1,35 +1,39 @@
 pipeline {
-	// comment for testing webhook2
-    agent any // run on any machine
+	// run on any machine
+    agent any
 
     tools {
-		// softwares needed in build
+		// tools needs in build
         jdk 'jdk17'
         maven 'maven3'
     }
 
     stages {
-		stage('Checkout Code') {
+		// get code from github
+        stage('Checkout Code') {
 			steps {
 				echo 'Checking out code...'
                 checkout scm
             }
         }
 
-        stage('Build & Test') {
+        stage('Build user-service') {
 			steps {
-				echo 'Building the user-service application...'
-                dir('user-service') {
-					// Exécution du wrapper Maven sous Windows
-                    bat 'mvnw.cmd clean package -DskipTests'
+				// ensure the build runs from the correct project root
+                dir('enaa-skills-backend') {
+					echo "--- Building inside: "
+
+                    // build the app
+                    sh 'mvn -f user-service/pom.xml clean package -DskipTests'
                 }
             }
         }
 
         stage('Archive Artifact') {
 			steps {
-				echo 'Archiving the artifact...'
-                archiveArtifacts artifacts: 'user-service/target/*.jar', fingerprint: true
+				// find the built .jar file
+                echo 'Archiving the artifact...'
+                archiveArtifacts artifacts: 'enaa-skills-backend/user-service/target/*.jar', fingerprint: true
             }
         }
     }
