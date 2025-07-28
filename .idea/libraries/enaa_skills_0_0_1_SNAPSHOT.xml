@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="enaa-skills-0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/enaa-skills-backend/skill-service/target/enaa-skills-0.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
