@@ -30,7 +30,7 @@ pipeline {
 
              // Change into the backend directory where the project now lives
              dir('enaa-skills-backend') {
-                    echo "--- Now running commands inside: $(pwd) ---"
+                    echo "--- Now running commands inside: "
                 sh 'ls -la'
 
                 // Grant execute permission to mvnw, which is in the current directory.
