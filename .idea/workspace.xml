@@ -5,161 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/enaa_skills/api_gateway/api_gateway/ApiGatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/enaa_skills/api_gateway/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/enaa_skills/api_gateway/api_gateway/filter/RouteValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/enaa_skills/api_gateway/api_gateway/util/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/enaa_skills/api_gateway/api_gateway/ApiGatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/Jenkinsfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/BriefServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/Feign/BriefInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/Feign/TrainerInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/controller/BriefController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/dto/SkillDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/dto/TrainerDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/model/Brief.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/repository/BriefRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/service/BriefService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/java/com/enaa_skills/brief_service/service/serviceImpl/BriefServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/test/java/com/enaa_skills/brief_service/service/serviceImpl/BriefServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief-service/src/test/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/java/com/example/discovery_service/DiscoveryServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/src/test/java/com/example/discovery_service/DiscoveryServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/RegisterSetviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/entity/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/entity/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/filter/JwtAuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/repository/UserInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/service/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/service/UserInfoDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/org/budgetmanager/registersetvice/service/UserInfoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/test/java/org/budgetmanager/registerservice/RegisterServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/test/java/org/budgetmanager/registersetvice/RegisterSetviceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/EnaaSkillsApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/config/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/controller/LearnerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/controller/SkillController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/dto/LearnerDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/dto/SkillDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/dto/SubSkillDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/mapper/LearnerMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/mapper/SkillMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/model/Learner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/model/Skill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/model/SubSkill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/model/ValidationStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/repository/LearnerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/repository/SkillRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/repository/SubSkillRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/service/LearnerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/service/SkillManagementService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/service/serviceImpl/LearnerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/java/com/enaa_skills/enaa_skills/service/serviceImpl/SkillManagementServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/test/java/com/enaa_skills/enaa_skills/EnaaSkillsApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill-service/src/test/java/com/enaa_skills/enaa_skills/ServiceTests/ENAA_SkillsTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/UserServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/controllers/SubmissionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/dto/BriefDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/dto/MessageResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/dto/RegistrationRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/dto/SkillDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/dto/SubmissionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/feing/BriefInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/feing/UserInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/model/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/model/Learner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/model/Submission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/model/Trainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/repositories/SubmissionRepositorie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/repositories/UserRepositorie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/services/SubmissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/enaa_skill/user_service/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/enaa_skill/user_service/services/UserServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/Controller/SkillValidationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/Model/SkillValidation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/Model/ValidationStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/ValidationserviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/client/BriefServiceClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/client/SkillServiceClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/client/UserServiceClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/dto/BriefDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/dto/SkillDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/dto/SubSkillDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/dto/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/repository/SkillValidationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/java/org/budgetmanager/validationservice/service/SkillValidationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;suilahi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lahcen404/ENAA-SKills-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;fd1b66b0-696d-47f7-9f38-d433934a330f&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -236,10 +95,10 @@
     "Spring Boot.ValidationserviceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Jenkins",
+    "git-widget-placeholder": "discovery",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/ENAA Devs/enaa-skills2/enaa-skills-backend/pom.xml",
+    "last_opened_file_path": "C:/Users/suila/Desktop/zaki/ENAA-SKills-microservices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -423,6 +282,8 @@
       <workItem from="1753353815552" duration="50000" />
       <workItem from="1753353882298" duration="21079000" />
       <workItem from="1753557549304" duration="10585000" />
+      <workItem from="1753715658814" duration="53000" />
+      <workItem from="1753715769502" duration="57000" />
     </task>
     <servers />
   </component>
