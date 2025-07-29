@@ -16,7 +16,6 @@ public class SubSkill {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private ValidationStatus status = ValidationStatus.NOT_VALIDATE;
 
     private String description;
