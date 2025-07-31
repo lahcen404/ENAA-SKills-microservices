@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" afterDir="false" />
@@ -13,6 +14,10 @@
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" afterDir="false" />
+
+
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -101,10 +111,12 @@
     "Spring Boot.ValidationserviceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+
     "git-widget-placeholder": "dashboard",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/devja/Desktop/Sprrint 5/ENAA-SKills-microservices",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,7 +126,9 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
+
     "settings.editor.selected.configurable": "MavenSettings",
+
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,6 +147,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ENAA Devs\enaa-skills2\enaa-skills-frontend" />
+      <recent name="C:\ENAA Devs\enaa-skills2\enaa-skills-frontend\src" />
+      <recent name="C:\ENAA Devs\enaa-skills2\enaa-skills-frontend\src\app" />
       <recent name="C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills2\brief-service" />
       <recent name="C:\Users\ENAA\OneDrive\Desktop\ENAA\Spring Boot\enaa-skills2" />
     </key>
@@ -150,7 +167,9 @@
       </set>
     </option>
   </component>
+
   <component name="RunManager" selected="Spring Boot.UserServiceApplication (1)">
+
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
@@ -290,24 +309,16 @@
       <workItem from="1753557549304" duration="10585000" />
       <workItem from="1753715658814" duration="53000" />
       <workItem from="1753715769502" duration="57000" />
+
       <workItem from="1753780422583" duration="2420000" />
       <workItem from="1753784364796" duration="3183000" />
       <workItem from="1753950259551" duration="33000" />
       <workItem from="1753950321359" duration="307000" />
+
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

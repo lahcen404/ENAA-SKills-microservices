@@ -34,7 +34,7 @@ public class SkillManagementServiceImpl implements SkillManagementService {
         if (skill.getSubSkills() != null) {
             for (SubSkill subSkill : skill.getSubSkills()) {
                 subSkill.setSkill(skill);
-                subSkill.setStatus(ValidationStatus.NOT_VALIDATE);
+               // subSkill.setStatus(ValidationStatus.NOT_VALIDATE);
             }
         }
         Skill savedSkill = skillRepository.save(skill);
