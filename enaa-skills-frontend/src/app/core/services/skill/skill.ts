@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Skill} from '../../modules/skill';
 
 @Injectable({
   providedIn: 'root'
 })
-export class Skill {
-  apiUrl="http://localhost:8080/api/surplus";
+export class SkillService {
+  apiUrl="http://localhost:8083/skills";
 
   constructor(private http: HttpClient){}
 
