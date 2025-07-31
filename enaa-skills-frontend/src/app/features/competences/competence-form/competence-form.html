@@ -59,26 +59,26 @@
         <div>
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-bold text-custom-purple">Subskills</h3>
-            <button type="button" id="add-subskill-btn"
-                    class="text-sm px-4 py-2 bg-custom-teal text-white rounded-lg font-medium hover:bg-opacity-90 transition">
-              Add Subskill
-            </button>
+            <!-- Le bouton "Add" est retiré car il n'y a plus de JS -->
           </div>
 
-          <!-- Subskill 1  -->
-          <div class="subskill-form p-4 border border-slate-200 rounded-lg bg-slate-50 mb-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-sm font-medium text-custom-muted-teal">Subskill Name</label>
-                <input type="text" name="subSkills[0][name]" required
-                       class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
-                       placeholder="e.g. Dependency Injection">
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-custom-muted-teal">Description</label>
-                <input type="text" name="subSkills[0][description]" required
-                       class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
-                       placeholder="e.g. Understand and use DI effectively">
+          <!-- Conteneur pour les sous-compétences -->
+          <div id="subskills-container" class="space-y-4">
+            <!-- Un seul formulaire de sous-compétence est affiché par défaut -->
+            <div class="subskill-form p-4 border border-slate-200 rounded-lg bg-slate-50">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-custom-muted-teal">Subskill Name</label>
+                  <input type="text" name="subSkills[0][name]" required
+                         class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
+                         placeholder="e.g. Dependency Injection">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-custom-muted-teal">Description</label>
+                  <input type="text" name="subSkills[0][description]" required
+                         class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
+                         placeholder="e.g. Understand and use DI effectively">
+                </div>
               </div>
             </div>
           </div>
@@ -100,5 +100,6 @@
     </div>
   </main>
 </div>
+
 
 </body>
