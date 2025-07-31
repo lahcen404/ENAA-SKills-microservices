@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SkillService } from '../../../core/services/skill/skill';
 import {Skill} from '../../../core/modules/skill';
 import {HttpClientModule} from '@angular/common/http';
+import {Router, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-competence-form',
@@ -11,7 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
 
   ],
   templateUrl: './competence-form.html',
@@ -23,7 +25,8 @@ export class CompetenceForm implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private skillService: SkillService
+    private skillService: SkillService,
+    private router: Router
   ) {}
 
 
@@ -72,6 +75,7 @@ export class CompetenceForm implements OnInit {
         this.competenceForm.reset();
         this.subSkills.clear();
         this.addSubSkill();
+        this.router.navigate(['/skills']);
       },
       error: (err) => {
         console.error("error in create  :", err);
