@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import {Login} from './features/auth/login/login';
-import {Register} from './features/auth/register/register';
+
+import {CompetenceForm} from './features/competences/competence-form/competence-form';
 
 export const routes: Routes = [
-  {path:'login',component:Login},
-  {path:'register',component:Register}
+
+  {path:'add-skill',component:CompetenceForm}
 ];
