@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="register-service" />
         <module name="brief-service" />
+        <module name="register-service" />
       </profile>
       <profile name="Annotation profile for enaa-skills-parent" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />

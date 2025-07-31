@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  imports: [
+    ReactiveFormsModule,
+    NgIf,
+    HttpClientModule
+  ],
   templateUrl: './register.html',
   styleUrl: './register.css'
 })
@@ -17,22 +22,22 @@ export class Register {
               private router: Router
   ) {
     this.registerForm = this.fb.group({
-      fullname: ['', Validators.required],
+      username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      role: ['',Validators.required]
+      userType: ['',Validators.required]
     });
   }
 
   onSubmit() {
     if (this.registerForm.valid) {
       const formData = {
-        fullName: this.registerForm.value.fullname, // ✅ correspond au formGroup
+        username: this.registerForm.value.username, // ✅ correspond au formGroup
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        role: this.registerForm.value.role
+        userType: this.registerForm.value.userType
       };
-      this.http.post('http://localhost:8081/api/auth/register', formData)
+      this.http.post('http://localhost:8089/auth/addNewUser', formData)
         .subscribe({
           next: () => this.router.navigate(['/login']),
           error: (err) => console.error('Erreur d’inscription', err)
