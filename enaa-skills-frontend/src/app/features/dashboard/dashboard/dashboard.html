@@ -1,1 +1,116 @@
-<p>dashboard works!</p>
+<div class="container py-4">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-primary">Dashboard de Suivi des Compétences</h2>
+    <p class="text-muted">Suivi des progrès et validations des apprenants</p>
+  </div>
+
+  <!-- Filtres -->
+  <div class="row g-3 mb-4">
+    <!-- Apprenant -->
+    <div class="col-md-4">
+      <label class="form-label">Apprenant</label>
+      <select class="form-select">
+        <option selected disabled>Choisir un apprenant</option>
+        <option>Marie Dubois</option>
+        <option>Jean Martin</option>
+        <option>Sophie Laurent</option>
+      </select>
+    </div>
+
+    <!-- Compétence -->
+    <div class="col-md-4">
+      <label class="form-label">Compétence</label>
+      <select class="form-select">
+        <option selected>Toutes</option>
+        <option>JavaScript</option>
+        <option>React</option>
+        <option>Node.js</option>
+        <option>Python</option>
+        <option>SQL</option>
+      </select>
+    </div>
+
+    <!-- Statut -->
+    <div class="col-md-4">
+      <label class="form-label">Statut</label>
+      <select class="form-select">
+        <option selected>Tous</option>
+        <option>Validée</option>
+        <option>Non validée</option>
+      </select>
+    </div>
+  </div>
+
+
+  <!-- Profil -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body d-flex align-items-center">
+      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+        MD
+      </div>
+      <div>
+        <strong>Marie Dubois</strong><br />
+        <small class="text-muted">marie.dubois.email.com</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistiques -->
+  <div class="row text-center mb-4">
+    <div class="col-md-4 mb-3">
+      <div class="p-3 border rounded bg-light">
+        <h4 class="text-primary fw-bold mb-0">5</h4>
+        <div>Compétences</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="p-3 border rounded bg-light">
+        <h4 class="text-primary fw-bold mb-0">3</h4>
+        <div>Validées</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="p-3 border rounded bg-light">
+        <h4 class="text-primary fw-bold mb-0">2</h4>
+        <div>Non validée</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tableau -->
+  <div class="card shadow-sm">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+        <tr>
+          <th>Compétence</th>
+          <th>Statut</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>JavaScript</td>
+          <td><span class="badge bg-success">Validée</span></td>
+        </tr>
+        <tr>
+          <td>React</td>
+          <td><span class="badge bg-success">Validée</span></td>
+        </tr>
+        <tr>
+          <td>Node.js</td>
+          <td><span class="badge bg-danger">Non validée</span></td>
+        </tr>
+        <tr>
+          <td>Python</td>
+
+          <td><span class="badge bg-danger">Non validée</span></td>
+        </tr>
+        <tr>
+          <td>SQL</td>
+          <td><span class="badge bg-success">Validée</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

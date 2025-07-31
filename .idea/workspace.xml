@@ -7,6 +7,15 @@
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" afterDir="false" />
+
+
       <change beforePath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -41,7 +50,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/lahcen404/ENAA-SKills-microservices.git&quot;,
-    &quot;accountId&quot;: &quot;fd1b66b0-696d-47f7-9f38-d433934a330f&quot;
+    &quot;accountId&quot;: &quot;140ef1aa-4ce5-40e2-9d8e-712278f5d396&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -103,10 +112,11 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
 
-    "git-widget-placeholder": "zakaria",
+    "git-widget-placeholder": "dashboard",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/suila/Desktop/zaki/ENAA-SKills-microservices",
+    "last_opened_file_path": "C:/Users/devja/Desktop/Sprrint 5/ENAA-SKills-microservices",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,7 +126,9 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+
+    "settings.editor.selected.configurable": "MavenSettings",
+
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -155,7 +167,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication (1)">
+
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
@@ -245,12 +259,12 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.BriefServiceImplTest.createBrief" />
-      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.BriefServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.EnaaSkillsApplication" />
       <item itemvalue="Spring Boot.RegisterSetviceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.ValidationserviceApplication" />
     </list>
@@ -295,8 +309,12 @@
       <workItem from="1753557549304" duration="10585000" />
       <workItem from="1753715658814" duration="53000" />
       <workItem from="1753715769502" duration="57000" />
-      <workItem from="1753720718524" duration="804000" />
-      <workItem from="1753778137167" duration="3080000" />
+
+      <workItem from="1753780422583" duration="2420000" />
+      <workItem from="1753784364796" duration="3183000" />
+      <workItem from="1753950259551" duration="33000" />
+      <workItem from="1753950321359" duration="307000" />
+
     </task>
     <servers />
   </component>
