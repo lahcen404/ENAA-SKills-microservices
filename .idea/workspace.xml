@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
 
       <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" afterDir="false" />
@@ -39,7 +44,7 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../ENAA-SKills-microservices" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -60,7 +65,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="C:\Users\ENAA\Downloads\apache-maven-3.9.11-bin\apache-maven-3.9.11" />
+        <option name="customMavenHome" value="C:\Users\suila\Downloads\apache-maven-3.9.10-bin\apache-maven-3.9.10" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
       </MavenGeneralSettings>
     </option>
@@ -112,6 +117,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
 
+
     "git-widget-placeholder": "dashboard",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -126,9 +132,9 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
+nal.directory.path": "C:\\Users\\suila\\Desktop\\enaa-skills\\ENAA-SKills-microservices\\enaa-skills-frontend\\node_modules\\typescript\\lib",
 
     "settings.editor.selected.configurable": "MavenSettings",
-
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -309,6 +315,7 @@
       <workItem from="1753557549304" duration="10585000" />
       <workItem from="1753715658814" duration="53000" />
       <workItem from="1753715769502" duration="57000" />
+
 
       <workItem from="1753780422583" duration="2420000" />
       <workItem from="1753784364796" duration="3183000" />
