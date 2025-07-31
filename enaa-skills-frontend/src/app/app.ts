@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BriefAssignmentComponent } from './features/briefs/brief-assignment/brief-assignment.component';
-import { BriefFormComponent } from './features/briefs/brief-form/brief-form.component';
-import { BriefListComponent } from './features/briefs/brief-list/brief-list';
+import { BriefForm } from './features/briefs/brief-form/brief-form';
+import { BriefList } from './features/briefs/brief-list/brief-list';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,BriefAssignmentComponent,],
+  imports: [RouterOutlet,BriefAssignmentComponent,BriefForm,BriefList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
