@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/dashboard/dashboard/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/index.html" afterDir="false" />
-
-
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/brief-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/brief-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/skill-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/skill-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/model/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/model/Learner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/repositories/UserRepositorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/user-service/src/main/java/com/enaa_skill/user_service/repositories/UserRepositorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,14 +57,6 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="customMavenHome" value="C:\Users\ENAA\Downloads\apache-maven-3.9.11-bin\apache-maven-3.9.11" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -76,62 +68,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.BriefServiceImplTest.createBrief.executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.api-gateway [install].executor": "Run",
-    "Maven.brief-service [clean].executor": "Run",
-    "Maven.brief-service [install].executor": "Run",
-    "Maven.brief-service [package].executor": "Run",
-    "Maven.brief-service [verify].executor": "Run",
-    "Maven.enaa-skills-parent [clean].executor": "Run",
-    "Maven.enaa-skills-parent [install].executor": "Run",
-    "Maven.enaa-skills-parent [package].executor": "Run",
-    "Maven.register-service [clean].executor": "Run",
-    "Maven.register-service [install].executor": "Run",
-    "Maven.register-service [package].executor": "Run",
-    "Maven.user-service [clean].executor": "Run",
-    "Maven.user-service [install].executor": "Run",
-    "Maven.user-service [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.BriefServiceApplication.executor": "Run",
-    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
-    "Spring Boot.EnaaSkillsApplication.executor": "Run",
-    "Spring Boot.RegisterSetviceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication (1).executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "Spring Boot.ValidationServiceApplication.executor": "Run",
-    "Spring Boot.ValidationserviceApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-
-    "git-widget-placeholder": "dashboard",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/devja/Desktop/Sprrint 5/ENAA-SKills-microservices",
-
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-
-    "settings.editor.selected.configurable": "MavenSettings",
-
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BriefServiceImplTest.createBrief.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.brief-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.brief-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.brief-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.brief-service [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.enaa-skills-parent [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.enaa-skills-parent [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.enaa-skills-parent [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.register-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.register-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.register-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BriefServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EnaaSkillsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RegisterSetviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ValidationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ValidationserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dashboard&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/devja/Desktop/Sprrint 5/ENAA-SKills-microservices/enaa-skills-backend/discovery-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -167,9 +157,7 @@
       </set>
     </option>
   </component>
-
   <component name="RunManager" selected="Spring Boot.UserServiceApplication (1)">
-
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
@@ -309,12 +297,12 @@
       <workItem from="1753557549304" duration="10585000" />
       <workItem from="1753715658814" duration="53000" />
       <workItem from="1753715769502" duration="57000" />
-
       <workItem from="1753780422583" duration="2420000" />
       <workItem from="1753784364796" duration="3183000" />
       <workItem from="1753950259551" duration="33000" />
       <workItem from="1753950321359" duration="307000" />
-
+      <workItem from="1753978187394" duration="3000000" />
+      <workItem from="1754037281308" duration="5747000" />
     </task>
     <servers />
   </component>

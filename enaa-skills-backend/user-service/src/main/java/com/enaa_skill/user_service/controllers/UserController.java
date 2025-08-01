@@ -5,21 +5,26 @@ import com.enaa_skill.user_service.dto.RegistrationRequest;
 import com.enaa_skill.user_service.model.Learner;
 import com.enaa_skill.user_service.model.Trainer;
 import com.enaa_skill.user_service.model.User;
+import com.enaa_skill.user_service.repositories.UserRepositorie;
 import com.enaa_skill.user_service.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
     private final UserService userService;
+    private UserRepositorie userRepositorie;
 
     public UserController(UserService userService) {
         this.userService = userService;
+
     }
 
     @PostMapping("/learner")
@@ -65,5 +70,14 @@ public class UserController {
         return userOptional.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/getAllLearners")
+    public ResponseEntity<List<User>> getAllLearners() {
+        List<User> learners = userRepositorie.findAllLearners();
+        return ResponseEntity.ok(learners);
+    }
+
+
+
 
 }

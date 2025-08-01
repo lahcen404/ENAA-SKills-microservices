@@ -1,12 +1,14 @@
 package com.enaa_skill.user_service.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
 @Entity
+@DiscriminatorValue("LEARNER")
 public class Learner extends User {
     public Learner() {
         super();

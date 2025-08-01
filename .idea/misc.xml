@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/register-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
         <option value="$PROJECT_DIR$/enaa-skills-backend/pom.xml" />
+        <option value="$PROJECT_DIR$/enaa-skills-backend/discovery-service/pom.xml" />
       </list>
     </option>
   </component>
