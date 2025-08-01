@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/competences/competence-card/competence-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/competences/competence-card/competence-card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/competences/competence-card/competence-card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/competences/competence-card/competence-card.ts" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +117,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ENAA/OneDrive/Desktop/ENAA/PlateShare-FileRouge",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -166,6 +168,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.EnaaSkillsApplication">
+
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
