@@ -6,10 +6,10 @@
 
       <!-- Nom complet -->
       <div>
-        <label for="fullname" class="block text-sm font-medium text-gray-700">Nom complet</label>
-        <input formControlName="fullname" id="fullname" type="text"
+        <label for="username" class="block text-sm font-medium text-gray-700">Nom complet</label>
+        <input formControlName="username" id="username" type="text"
                class="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <div *ngIf="registerForm.get('fullname')?.invalid && registerForm.get('fullname')?.touched"
+        <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched"
              class="text-red-500 text-sm mt-1">
           Le nom est requis.
         </div>
@@ -39,14 +39,14 @@
 
       <!-- Rôle -->
       <div>
-        <label for="role" class="block text-sm font-medium text-gray-700">Rôle</label>
-        <select formControlName="role" id="role"
+        <label for="userType" class="block text-sm font-medium text-gray-700">Rôle</label>
+        <select formControlName="userType" id="userType"
                 class="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="">-- Sélectionner un rôle --</option>
-          <option value="MEMBRE">Membre</option>
-          <option value="FORMATEUR">ENTRAINEUR</option>
+          <option value="Learner">Learner</option>
+          <option value="Trainer">Trainer</option>
         </select>
-        <div *ngIf="registerForm.get('role')?.invalid && registerForm.get('role')?.touched"
+        <div *ngIf="registerForm.get('userType')?.invalid && registerForm.get('userType')?.touched"
              class="text-red-500 text-sm mt-1">
           Le rôle est requis.
         </div>
