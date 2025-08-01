@@ -10,7 +10,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Optional utility classes (like Tailwind) */
 .bg-custom-purple { background-color: var(--custom-purple); }
 .text-custom-purple { color: var(--custom-purple); }
 
@@ -22,3 +21,4 @@ body {
 
 .bg-custom-muted-teal { background-color: var(--custom-muted-teal); }
 .text-custom-muted-teal { color: var(--custom-muted-teal); }
+
