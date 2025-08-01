@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="C:\Users\suila\Downloads\apache-maven-3.9.10-bin\apache-maven-3.9.10" />
+        <option name="customMavenHome" value="C:\Users\ENAA\Downloads\apache-maven-3.9.11-bin\apache-maven-3.9.11" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
       </MavenGeneralSettings>
     </option>
@@ -108,6 +109,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/suila/Desktop/enaa-skills/ENAA-SKills-microservices/enaa-skills-backend/discovery-service",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,8 +119,8 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "ts.external.directory.path": "C:\\Users\\suila\\Desktop\\enaa-skills\\ENAA-SKills-microservices\\enaa-skills-frontend\\node_modules\\typescript\\lib",
+
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -157,7 +159,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DiscoveryServiceApplication">
+
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
@@ -247,12 +250,12 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.BriefServiceImplTest.createBrief" />
+      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.BriefServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.EnaaSkillsApplication" />
       <item itemvalue="Spring Boot.RegisterSetviceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.ValidationserviceApplication" />
     </list>
@@ -297,13 +300,10 @@
       <workItem from="1753557549304" duration="10585000" />
       <workItem from="1753715658814" duration="53000" />
       <workItem from="1753715769502" duration="57000" />
-      <workItem from="1753780422583" duration="2420000" />
-      <workItem from="1753784364796" duration="3183000" />
-      <workItem from="1753950259551" duration="33000" />
-      <workItem from="1753950321359" duration="307000" />
-      <workItem from="1753974946233" duration="323000" />
-      <workItem from="1753975300645" duration="4874000" />
-      <workItem from="1754038098666" duration="547000" />
+
+      
+      <workItem from="1753720718524" duration="804000" />
+      <workItem from="1753778137167" duration="3080000" />
     </task>
     <servers />
   </component>

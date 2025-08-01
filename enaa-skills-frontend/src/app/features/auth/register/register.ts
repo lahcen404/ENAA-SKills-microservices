@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 import {Router} from '@angular/router';
 import {NgIf} from '@angular/common';
 
@@ -10,6 +11,7 @@ import {NgIf} from '@angular/common';
     ReactiveFormsModule,
     NgIf,
     HttpClientModule
+
   ],
   templateUrl: './register.html',
   styleUrl: './register.css'
