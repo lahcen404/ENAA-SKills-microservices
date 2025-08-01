@@ -1,5 +1,4 @@
 package com.enaa_skills.brief_service.controller;
-
 import com.enaa_skills.brief_service.model.Brief;
 import com.enaa_skills.brief_service.service.BriefService;
 import org.springframework.beans.factory.annotation.Autowired;

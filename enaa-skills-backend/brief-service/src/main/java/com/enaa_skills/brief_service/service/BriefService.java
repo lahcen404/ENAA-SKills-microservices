@@ -12,6 +12,5 @@ public interface BriefService {
         Optional<Brief> updateBrief(Long id, Brief briefDetails);
 
         boolean deleteBrief(Long id);
-
-        
+        void assignBriefToLearner(Long briefId, Long learnerId); 
 }
