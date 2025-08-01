@@ -9,8 +9,8 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface SkillMapper {
-    @Mapping(target = "validate", ignore = true)
-    SkillDTO skillToSkillDTO(Skill skill);
+    // @Mapping(target = "validate", ignore = true)
+    SkillDTO toDto(Skill skill);
 
     SubSkillDTO subSkillToSubSkillDTO(SubSkill subSkill);
 

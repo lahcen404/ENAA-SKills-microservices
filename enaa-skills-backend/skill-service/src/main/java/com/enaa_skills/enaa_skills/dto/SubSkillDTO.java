@@ -10,13 +10,13 @@ public class SubSkillDTO {
     private String name;
     @NotNull
     private String description;
-    private ValidationStatus status;
+    // private ValidationStatus status;
 
-    public SubSkillDTO(Long id, String name, String description, ValidationStatus status) {
+    public SubSkillDTO(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.status = status;
+       // this.status = status;
     }
 
     public Long getId() {
@@ -43,11 +43,7 @@ public class SubSkillDTO {
         this.description = description;
     }
 
-    public ValidationStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(ValidationStatus status) {
-        this.status = status;
-    }
+    // public void setStatus(ValidationStatus status) {
+        //this.status = status;
+    //}
 }

@@ -7,13 +7,13 @@ import java.util.List;
 public class SkillDTO {
     private Long id;
     private String name;
-    private boolean validate;
+    //private boolean validate;
     private List<SubSkillDTO> subSkills;
 
-    public SkillDTO(Long id, String name, boolean validate, List<SubSkillDTO> subSkills) {
+    public SkillDTO(Long id, String name, List<SubSkillDTO> subSkills) {
         this.id = id;
         this.name = name;
-        this.validate = validate;
+        //this.validate = validate;
         this.subSkills = subSkills;
     }
 
@@ -42,11 +42,11 @@ public class SkillDTO {
         this.subSkills = subSkills;
     }
 
-    public boolean isValidate() {
-        return validate;
-    }
-
-    public void setValidate(boolean validate) {
-        this.validate = validate;
-    }
+//    public boolean isValidate() {
+//        return validate;
+//    }
+//
+//    public void setValidate(boolean validate) {
+//        this.validate = validate;
+//    }
 }
