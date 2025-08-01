@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8979c11b-a488-4126-8316-12678051f5b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/entity/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/entity/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/java/org/budgetmanager/registersetvice/service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-backend/register-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/register/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/register/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/enaa-skills-frontend/src/app/features/auth/register/register.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +75,8 @@
     "Maven.brief-service [install].executor": "Run",
     "Maven.brief-service [package].executor": "Run",
     "Maven.brief-service [verify].executor": "Run",
+    "Maven.discovery-service [clean].executor": "Run",
+    "Maven.discovery-service [package].executor": "Run",
     "Maven.enaa-skills-parent [clean].executor": "Run",
     "Maven.enaa-skills-parent [install].executor": "Run",
     "Maven.enaa-skills-parent [package].executor": "Run",
@@ -116,7 +107,7 @@
     "git-widget-placeholder": "zakaria",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/suila/Desktop/enaa-skills/ENAA-SKills-microservices/enaa-skills-backend/register-service",
+    "last_opened_file_path": "C:/Users/suila/Desktop/enaa-skills/ENAA-SKills-microservices/enaa-skills-backend/discovery-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -166,7 +157,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RegisterSetviceApplication">
+  <component name="RunManager" selected="Spring Boot.DiscoveryServiceApplication">
     <configuration name="BriefServiceImplTest.createBrief" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="brief-service" />
       <extension name="coverage">
@@ -311,7 +302,8 @@
       <workItem from="1753950259551" duration="33000" />
       <workItem from="1753950321359" duration="307000" />
       <workItem from="1753974946233" duration="323000" />
-      <workItem from="1753975300645" duration="4593000" />
+      <workItem from="1753975300645" duration="4874000" />
+      <workItem from="1754038098666" duration="547000" />
     </task>
     <servers />
   </component>

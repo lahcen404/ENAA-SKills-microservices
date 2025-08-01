@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="brief-service" />
         <module name="register-service" />
+        <module name="brief-service" />
+        <module name="discovery-service" />
       </profile>
       <profile name="Annotation profile for enaa-skills-parent" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -46,7 +47,6 @@
     <bytecodeTargetLevel>
       <module name="api-gateway (1)" target="17" />
       <module name="brief-service (1)" target="17" />
-      <module name="discovery-service" target="17" />
       <module name="enaa-skills (1)" target="17" />
       <module name="enaa-skills-parent (1)" target="1.5" />
       <module name="user-service (1)" target="17" />
