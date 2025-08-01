@@ -61,8 +61,8 @@ public class ENAA_SkillsTests {
 
     @Test
     void createSkillTest() {
-        SubSkillDTO newSubSkill = new SubSkillDTO(null, "Springboot", "test", ValidationStatus.NOT_VALIDATE);
-        SkillDTO newSkill = new SkillDTO(null, "SpringFramework", false, List.of(newSubSkill));
+        SubSkillDTO newSubSkill = new SubSkillDTO(null, "Springboot", "test");
+        SkillDTO newSkill = new SkillDTO(null, "SpringFramework",  List.of(newSubSkill));
 
         SkillDTO skillCreated = skillManagementService.createSkill(newSkill);
 
@@ -71,7 +71,6 @@ public class ENAA_SkillsTests {
         assertEquals("SpringFramework", skillCreated.getName());
         assertEquals(1, skillCreated.getSubSkills().size());
         assertEquals("Springboot", skillCreated.getSubSkills().get(0).getName());
-        assertEquals(ValidationStatus.NOT_VALIDATE, skillCreated.getSubSkills().get(0).getStatus());
     }
 
     @Test
@@ -98,9 +97,9 @@ public class ENAA_SkillsTests {
         Long skillId = existingSkill.getId();
         Long subSkillIdToUpdate = existingSkill.getSubSkills().get(0).getId();
 
-        SubSkillDTO updatedSubSkillDTO = new SubSkillDTO(subSkillIdToUpdate, "update name subskill", "new descriprion subskill", ValidationStatus.VALIDATE);
+        SubSkillDTO updatedSubSkillDTO = new SubSkillDTO(subSkillIdToUpdate, "update name subskill", "new descriprion subskill");
 
-        SkillDTO skillUpdate = new SkillDTO(skillId, "update Java ", false, List.of(updatedSubSkillDTO));
+        SkillDTO skillUpdate = new SkillDTO(skillId, "update Java ",  List.of(updatedSubSkillDTO));
 
         SkillDTO updatedSkillDTO = skillManagementService.updateSkill(skillId, skillUpdate);
 
@@ -109,7 +108,6 @@ public class ENAA_SkillsTests {
 
         SubSkill updatedSubSkillFromDb = subSkillRepository.findById(subSkillIdToUpdate).orElseThrow();
         assertEquals("update name subskill", updatedSubSkillFromDb.getName());
-        assertEquals(ValidationStatus.VALIDATE, updatedSubSkillFromDb.getStatus());
         assertEquals("new descriprion subskill", updatedSubSkillFromDb.getDescription());
 
     }

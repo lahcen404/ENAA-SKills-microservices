@@ -15,8 +15,8 @@ public class SubSkill {
     @Column(nullable = false)
     private String name;
 
-    @Enumerated(EnumType.STRING)
-    private ValidationStatus status = ValidationStatus.NOT_VALIDATE;
+//    @Enumerated(EnumType.STRING)
+//    private ValidationStatus status = ValidationStatus.NOT_VALIDATE;
 
     private String description;
     @ManyToOne(fetch = FetchType.LAZY)
@@ -26,7 +26,7 @@ public class SubSkill {
 
     public SubSkill(String name, String description, ValidationStatus status) {
         this.name = name;
-        this.status = status;
+//        this.status = status;
         this.description = description;
     }
 
@@ -51,13 +51,13 @@ public class SubSkill {
         this.name = name;
     }
 
-    public ValidationStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(ValidationStatus status) {
-        this.status = status;
-    }
+//    public ValidationStatus getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(ValidationStatus status) {
+//        this.status = status;
+//    }
 
     public Skill getSkill() {
         return skill;
