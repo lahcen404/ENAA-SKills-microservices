@@ -42,5 +42,7 @@ export class CompetenceList implements OnInit{
       })
     )
   }
-
+  handleSkillDeleted(deletedSkillId: number): void {
+    this.loadSkills();
+  }
 }
