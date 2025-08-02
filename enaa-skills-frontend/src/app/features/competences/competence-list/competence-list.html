@@ -21,7 +21,7 @@
 
     <!-- Skill Cards  -->
     <div *ngIf="skill$ | async as skillItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <app-competence-card *ngFor="let skill of skillItems" [skill]="skill"></app-competence-card>
+      <app-competence-card *ngFor="let skill of skillItems" [skill]="skill"  (deleted)="handleSkillDeleted($event)"></app-competence-card>
     </div>
 
   </div>
