@@ -1,45 +1,50 @@
-import { Component } from '@angular/core';
+// In src/app/features/briefs/brief-assignment/brief-assignment.component.ts
+
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { BriefService } from '../brief.service';
+
 @Component({
   selector: 'app-brief-assignment',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './brief-assignment.component.html',
-  styleUrl: './brief-assignment.component.css'
+  styleUrls: ['./brief-assignment.component.css']
 })
-export class BriefAssignmentComponent {
+export class BriefAssignmentComponent implements OnInit {
+  // Properties for ngModel
+  selectedBriefId: number | null = null;
+  selectedLearnerId: number | null = null;
+  selectedCompetencyId: number | null = null; // Note: the backend doesn't use this yet
 
-  selectedBrief: any;
-  selectedLearner: any;
-  selectedCompetency: any;
+  // Arrays for the dropdowns
+  briefs: any[] = [];
+  learners: any[] = [];
+  competencies: any[] = [];
 
-  // 2. You must provide arrays for the *ngFor loops
-  //    (Here is some mock data so you can see it work)
-  briefs = [
-    { id: 1, title: 'Develop a Web App' },
-    { id: 2, title: 'Create a Mobile UI' }
-  ];
+  constructor(
+    private briefService: BriefService,
+    private router: Router
+  ) {}
 
-  learners = [
-    'Salmane Krr',
-    'John Doe',
-    'Jane Smith'
-  ];
-
-  competencies = [
-    'Angular Framework',
-    'UI/UX Design',
-    'Database Management'
-  ];
-
-  // 3. You must declare the method for (ngSubmit)
-  onAssign() {
-    console.log('Form Submitted!');
-    console.log('Selected Brief ID:', this.selectedBrief);
-    console.log('Selected Learner:', this.selectedLearner);
-    console.log('Selected Competency:', this.selectedCompetency);
+  ngOnInit(): void {
+    // Fetch data for all three dropdowns when the page loads
+    this.briefService.getBriefs().subscribe(data => this.briefs = data);
+    this.briefService.getLearners().subscribe(data => this.learners = data);
+    // You'll need to create getCompetencies() in your service if it's not there
+    // this.briefService.getCompetencies().subscribe(data => this.competencies = data);
   }
 
-
+  onAssign() {
+    if (this.selectedBriefId && this.selectedLearnerId) {
+      this.briefService.assignBrief(this.selectedBriefId, this.selectedLearnerId).subscribe(() => {
+        console.log('Assignment successful!');
+        this.router.navigate(['/briefs']);
+      });
+    } else {
+      console.error('Brief and Learner must be selected.');
+    }
+  }
 }
