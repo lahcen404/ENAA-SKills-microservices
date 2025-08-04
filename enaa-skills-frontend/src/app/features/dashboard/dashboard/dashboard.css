@@ -1,0 +1,4 @@
+/* Pour un meilleur arrondi et ombrage */
+.card {
+  border-radius: 12px;
+}

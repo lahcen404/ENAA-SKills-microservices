@@ -1,1 +1,24 @@
 @import "tailwindcss";
+:root {
+  --custom-purple: #845EC2;
+  --custom-teal: #00C9A7;
+  --custom-aqua: #C4FCEF;
+  --custom-muted-teal: #4D8076;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-custom-purple { background-color: var(--custom-purple); }
+.text-custom-purple { color: var(--custom-purple); }
+
+.bg-custom-teal { background-color: var(--custom-teal); }
+.text-custom-teal { color: var(--custom-teal); }
+
+.bg-custom-aqua { background-color: var(--custom-aqua); }
+.text-custom-aqua { color: var(--custom-aqua); }
+
+.bg-custom-muted-teal { background-color: var(--custom-muted-teal); }
+.text-custom-muted-teal { color: var(--custom-muted-teal); }
+

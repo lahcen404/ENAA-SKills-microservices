@@ -1,1 +1,31 @@
-<p>navbar works!</p>
+<nav class="bg-gradient-to-r from-purple-900 via-purple-600 to-purple-900 px-8 py-4 shadow-lg">
+  <div class="flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="text-white font-extrabold text-2xl tracking-wide">
+      ENAA Skills
+    </div>
+
+    <!-- Nav Links -->
+    <div class="flex space-x-6 items-center">
+      <a routerLink="/skills" class="text-white font-medium no-underline  transition duration-200">
+        Compétences
+      </a>
+      <a routerLink="/apprenants" class="text-white font-medium no-underline hover:underline transition duration-200">
+        Apprenants
+      </a>
+      <a routerLink="/briefs" class="text-white font-medium no-underline hover:underline transition duration-200">
+        Briefs
+      </a>
+      <a routerLink="/login" class="text-white font-medium no-underline hover:underline transition duration-200">
+        Connexion
+      </a>
+
+      <!-- CTA Button -->
+      <a routerLink="/register"
+         class="bg-gradient-to-r from-emerald-400 to-teal-600 text-white font-bold px-5 py-2 rounded-lg hover:opacity-90 shadow-md transition-all duration-300 no-underline">
+        S'inscrire
+      </a>
+    </div>
+  </div>
+</nav>

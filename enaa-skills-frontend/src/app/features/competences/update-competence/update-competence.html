@@ -1,0 +1,70 @@
+<body>
+<div>
+  <main>
+    <div class="p-8 overflow-auto">
+
+      <form [formGroup]="skillForm" (ngSubmit)="onSubmit()" class="space-y-8 bg-white p-10 rounded-xl shadow-lg border border-slate-200">
+        <div class="flex justify-end mb-4">
+          <button routerLink="/skills"
+                  class="px-6 py-3 font-bold text-white bg-custom-purple rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 disabled:bg-slate-400">
+            Liste des Compétences
+          </button>
+        </div>
+        <!-- Section Compétence Principale -->
+        <div>
+          <h3 class="text-xl font-bold text-custom-purple mb-4">Compétence Principale</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+              <label for="skillName" class="block text-sm font-medium text-custom-muted-teal">Nom de la compétence</label>
+              <input type="text" id="skillName" formControlName="name" required
+                     class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
+              >
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Section Sous-Compétences -->
+        <div>
+
+
+          <div id="subskills-container" formArrayName="subSkills" class="space-y-4">
+
+            <div *ngFor="let subSkill of subSkills.controls; let i=index" [formGroupName]="i" class="subskill-form p-4 border border-slate-200 rounded-lg bg-slate-50 relative">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                <div>
+                  <label class="block text-sm font-medium text-custom-muted-teal">Nom de la sous-compétence</label>
+                  <input type="text" formControlName="name" required
+                         class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
+                  >
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-custom-muted-teal">Description</label>
+                  <input type="text" formControlName="description" required
+                         class="w-full px-4 py-2 mt-1 border border-slate-300 rounded-lg shadow-sm focus:ring-custom-teal focus:border-custom-teal transition"
+                  >
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Boutons d'action -->
+        <div class="flex justify-end space-x-4 pt-6 border-t border-slate-200">
+          <button type="button"
+                  class="px-6 py-2 font-bold text-slate-700 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors">
+            Annuler
+          </button>
+          <button type="submit" [disabled]="!skillForm.valid"
+                  class="px-6 py-2 font-bold text-white bg-custom-purple rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 disabled:bg-slate-400 disabled:scale-100">
+            Enregistrer la Compétence
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+</body>

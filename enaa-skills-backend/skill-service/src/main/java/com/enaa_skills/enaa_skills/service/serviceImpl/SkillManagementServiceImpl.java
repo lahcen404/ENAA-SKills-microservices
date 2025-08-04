@@ -38,44 +38,44 @@ public class SkillManagementServiceImpl implements SkillManagementService {
             }
         }
         Skill savedSkill = skillRepository.save(skill);
-        return convertToDtoWithValidateStatus(savedSkill);
+        return skillMapper.toDto(savedSkill);
     }
 
-    private SkillDTO convertToDtoWithValidateStatus(Skill skill) {
-        // entity to  DTO
-        SkillDTO dto = skillMapper.skillToSkillDTO(skill);
-
-        if (skill.getSubSkills() == null || skill.getSubSkills().isEmpty()) {
-            dto.setValidate(false);
-            return dto;
-        }
-
-        // count  validate subSkills
-        int validatedCount = 0;
-        for (SubSkill subSkill : skill.getSubSkills()) {
-            if (subSkill.getStatus() == ValidationStatus.VALIDATE) {
-                validatedCount++;
-            }
-        }
-
-        boolean isValidate = validatedCount > (skill.getSubSkills().size() / 2.0);
-        dto.setValidate(isValidate);
-
-        return dto;
-    }
+//    private SkillDTO convertToDtoWithValidateStatus(Skill skill) {
+//        // entity to  DTO
+//        SkillDTO dto = skillMapper.skillToSkillDTO(skill);
+//
+//        if (skill.getSubSkills() == null || skill.getSubSkills().isEmpty()) {
+//            dto.setValidate(false);
+//            return dto;
+//        }
+//
+//        // count  validate subSkills
+//        int validatedCount = 0;
+//        for (SubSkill subSkill : skill.getSubSkills()) {
+//            if (subSkill.getStatus() == ValidationStatus.VALIDATE) {
+//                validatedCount++;
+//            }
+//        }
+//
+//        boolean isValidate = validatedCount > (skill.getSubSkills().size() / 2.0);
+//        dto.setValidate(isValidate);
+//
+//        return dto;
+//    }
 
     @Override
     public SkillDTO getSkillById(Long id) {
         Skill skill = skillRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("skill not found"));
 
-        return convertToDtoWithValidateStatus(skill);
+        return skillMapper.toDto(skill);
     }
 
     @Override
     public List<SkillDTO> getAllSkills() {
         return skillRepository.findAll().stream()
-                .map(this::convertToDtoWithValidateStatus)
+                .map(skillMapper::toDto)
                 .collect(Collectors.toList());    }
 
     @Override
@@ -90,12 +90,12 @@ public class SkillManagementServiceImpl implements SkillManagementService {
                    .orElseThrow(() -> new RuntimeException("skill not found "));
 
            existingSubSkill.setName(subSkillDTO.getName());
-           existingSubSkill.setStatus(subSkillDTO.getStatus());
+           //existingSubSkill.setStatus(subSkillDTO.getStatus());
            existingSubSkill.setDescription(subSkillDTO.getDescription());
        }
 
        Skill updatedSkill = skillRepository.save(existingSkill);
-        return convertToDtoWithValidateStatus(updatedSkill);
+        return skillMapper.toDto(updatedSkill);
     }
 
     @Override
