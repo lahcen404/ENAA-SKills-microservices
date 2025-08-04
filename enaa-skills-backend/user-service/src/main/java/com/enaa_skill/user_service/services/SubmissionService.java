@@ -5,7 +5,7 @@ import com.enaa_skill.user_service.feing.UserInterface;
 import com.enaa_skill.user_service.model.Learner;
 import com.enaa_skill.user_service.model.Submission;
 import com.enaa_skill.user_service.repositories.SubmissionRepositorie;
-import com.enaa_skill.user_service.repositories.UserRepositorie;
+import com.enaa_skill.user_service.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -13,11 +13,11 @@ import java.util.Optional;
 @Service
 public class SubmissionService {
     private final SubmissionRepositorie submissionRepositorie;
-    private final UserRepositorie userRepositorie;
+    private final UserRepository userRepositorie;
     private final UserInterface userInterface;
 
     public SubmissionService(SubmissionRepositorie submissionRepositorie,
-                             UserRepositorie userRepositorie,
+                             UserRepository userRepositorie,
                              UserInterface userInterface) {
         this.submissionRepositorie = submissionRepositorie;
         this.userRepositorie = userRepositorie;

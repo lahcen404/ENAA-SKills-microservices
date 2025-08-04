@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 class UserServiceTest {
     @Autowired
-     UserService userService ;
+     UserServiceImpl userService ;
 
     @Test
     void registerLearner() {

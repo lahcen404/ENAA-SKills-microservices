@@ -1,0 +1,32 @@
+<div class="container mx-auto pt-24 p-6">
+  <div class="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
+    <h2 class="text-3xl font-bold text-blue-600 mb-4">Assign Brief</h2>
+    <form (ngSubmit)="onAssign()" #assignForm="ngForm">
+      <div class="mb-4">
+        <label class="block text-gray-800 font-medium mb-2">Select Brief</label>
+        <select name="brief" [(ngModel)]="selectedBriefId" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800" required>
+          <option value="">Select a brief</option>
+          <option *ngFor="let brief of briefs" [value]="brief.id">{{ brief.title }}</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-800 font-medium mb-2">Select Learner</label>
+        <select name="learner" [(ngModel)]="selectedLearnerId" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800">
+          <option value="">Select a learner</option>
+          <option *ngFor="let learner of learners" [value]="learner.id">{{ learner.username }}</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-800 font-medium mb-2">Select Competency</label>
+        <select name="competency" [(ngModel)]="selectedCompetencyId" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800">
+          <option value="">Select a competency</option>
+          <option *ngFor="let competency of competencies" [value]="competency.id">{{ competency.name }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="w-full bg-green-400 text-white p-3 rounded-lg hover:bg-green-500 transition-colors duration-200">Assign</button>
+    </form>
+  </div>
+</div>

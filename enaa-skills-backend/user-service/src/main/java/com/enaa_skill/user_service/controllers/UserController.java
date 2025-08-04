@@ -5,20 +5,24 @@ import com.enaa_skill.user_service.dto.RegistrationRequest;
 import com.enaa_skill.user_service.model.Learner;
 import com.enaa_skill.user_service.model.Trainer;
 import com.enaa_skill.user_service.model.User;
-import com.enaa_skill.user_service.services.UserService;
+
+import com.enaa_skill.user_service.services.UserServiceImpl;
+
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    private final UserService userService;
 
-    public UserController(UserService userService) {
+    private final UserServiceImpl userService;
+
+    public UserController(UserServiceImpl userService) {
         this.userService = userService;
     }
 
@@ -26,33 +30,20 @@ public class UserController {
     public ResponseEntity<MessageResponse> registerLearner(@Valid @RequestBody RegistrationRequest registrationRequest) {
         try {
             Learner registeredLearner = userService.registerLearner(registrationRequest);
-            if (registeredLearner != null) {
-                return ResponseEntity.status(HttpStatus.CREATED)
-                        .body(new MessageResponse("Learner " + registeredLearner.getUsername() + " (ID: " + registeredLearner.getId() + ") registered successfully!"));
-            } else {
-                // Code de secours si jamais `registerLearner` retourne null
-                String errorMessage = userService.getValidationErrorMessage();
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                        .body(new MessageResponse("Registration failed: " + errorMessage));
-            }
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body(new MessageResponse("Learner " + registeredLearner.getUsername() + " (ID: " + registeredLearner.getId() + ") registered successfully!"));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An error occurred: " + e.getMessage()));
         }
     }
 
-    @PostMapping("/Trainer")
+    @PostMapping("/trainer")
     public ResponseEntity<MessageResponse> registerTrainer(@Valid @RequestBody RegistrationRequest registrationRequest) {
         try {
             Trainer registeredTrainer = userService.registerTrainer(registrationRequest);
-            if (registeredTrainer != null) {
-                return ResponseEntity.status(HttpStatus.CREATED)
-                        .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
-            } else {
-                String errorMessage = userService.getValidationErrorMessage();
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                        .body(new MessageResponse("Registration failed: " + errorMessage));
-            }
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body(new MessageResponse("Trainer " + registeredTrainer.getUsername() + " (ID: " + registeredTrainer.getId() + ") registered successfully!"));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new MessageResponse("An error occurred: " + e.getMessage()));
@@ -60,10 +51,15 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> checkUserExists(@PathVariable Long id) {
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
         Optional<User> userOptional = userService.getUserById(id);
         return userOptional.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/learners")
+    public ResponseEntity<List<Learner>> getAllLearners() {
+        List<Learner> learners = userService.getAllLearners();
+        return ResponseEntity.ok(learners);
+    }
 }
